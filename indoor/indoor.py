@@ -1,3 +1,3 @@
-print("Hello, Word")
-print("This is CS50")
+print("HELLO")
+print("THIS IS CS50")
 print(50)
