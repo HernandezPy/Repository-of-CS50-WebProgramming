@@ -1,3 +1,3 @@
 print("This...is...CS50")
-print("This...is...our...week...on...funtions")
-print("Let's...implement...a...funtion...called...hello")
+print("This...is...our...week...on...functions")
+print("Let's...implement...a...function...called...hello")
