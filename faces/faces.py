@@ -1,8 +1,13 @@
+def convert(input_str):
+    emoji_str = input_str.replace(':)', '🙂').replace(':(', '🙁')
+    return emoji_str
+
+
 def main():
-    user_input = input("Please enter your text: ")
-    lowercased_text = user_input.lower()
-    print(lowercased_text)
+    user_emoji = input('Please enter your text: ')
+    converted_text = convert(user_emoji)
+    print(converted_text)
 
+if __name__ == '__main__':
 
-if __name__ == "__main__":
-    main()
+   main()
