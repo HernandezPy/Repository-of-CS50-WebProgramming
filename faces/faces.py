@@ -7,6 +7,6 @@ def main():
     capital_letter = lower_case
     print('capital_letter')
 
-if __lower__ == '__main__':
+if __lowercase__ == '__main__':
 
   main()
