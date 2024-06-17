@@ -1,7 +1,3 @@
-print('Hello 🙂')
-print('Goodbye :(')
-print('Hello 🙂 Goodbye 🙁')
-
 def convert(input_str):
     emoji_str = input_str.replace(':)', '🙂').replace(':(', '🙁')
     return emoji_str
