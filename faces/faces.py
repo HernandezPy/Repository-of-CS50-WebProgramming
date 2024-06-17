@@ -1,13 +1,12 @@
-def convert(input_str):
-    emoji_str = input_str.replace(':)', '🙂').replace(':(', '🙁')
-    return emoji_str
-
+def lowercase():
+    user_str = input_lower.case("HELLO, wORD").lower.case("hello,word")
+    return user_input
 
 def main():
-    user_emoji = input('Please enter your text: ')
-    converted_text = convert(user_emoji)
-    print(converted_text)
+    lower_case = ('PLEASE ENTER ONLY CAPITAL LETTERS')
+    capital_letter = lower_case
+    print('capital_letter')
 
-if __name__ == '__main__':
+if __lower__ == '__main__':
 
-   main()
+  main()
