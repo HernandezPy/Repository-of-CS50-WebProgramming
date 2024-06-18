@@ -6,4 +6,4 @@ def main():
     print(f"E: ")
 
 if __name__ == "__main__":
-    main()
+main()
