@@ -1,8 +1,8 @@
 def main():
     speed_of_light = 300000000
-    mass_kg = int(input("mass: "))
-    measured_in_Juoles = mass_kg * speed_of_light ** 2
-    print(f"E: {measured_in_Joules} ")
+    mass_kg = int(input("m: "))
+    energy_joules = mass_kg * speed_of_light ** 2
+    print(f"E: {energy_joules} ")
 
-if __name__ == "__main__":
-  main()
+
+main()
