@@ -1,15 +1,10 @@
-print("Este es Deep Thought")
-print("Bienvenido a mi juego de preguntas!")
-
-question = input("What is the answer to the great question of life, the universe, and everything?")
-while True:
-       answer == answer
-
-    if answer == ('42')
-      print("yes")
-     elif answer == ('forty-two')
-        print('yes')
-     elif answer == ('forty two')
-         print('yes')
+def main(answer):
+    normalized_answer = answer.lower().strip()
+    normal_answer = ['42', 'forty-two', 'forty two']
+    if normalized_answer = normal_answer:
+      return 'yes'
     else:
-       print('no')
+       return 'no'
+
+
+def question
