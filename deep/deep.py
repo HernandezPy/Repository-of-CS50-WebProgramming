@@ -5,11 +5,11 @@ question = input("What is the answer to the great question of life, the universe
 while True:
        answer == answer
 
-if answer == ('42')
+    if answer == ('42')
       print("yes")
-    elif answer == ('forty-two')
+     elif answer == ('forty-two')
         print('yes')
      elif answer == ('forty two')
          print('yes')
-   else:
-   print('no')
+    else:
+       print('no')
