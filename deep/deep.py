@@ -7,4 +7,5 @@ def main(answer):
        return 'no'
 
 
-def question
+def ():
+
