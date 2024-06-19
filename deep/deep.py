@@ -9,7 +9,7 @@ def main(answer):
 
 def check_question():
    question = input("What is the Great Question of life, the Universe, and everythin? ")
-   result = main(check_question)
+   result = main(question)
    print(result)
 
 
