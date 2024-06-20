@@ -9,14 +9,9 @@ def greeting_response(hello):
 
 
 def main():
-    while True:
-        user_greeting = input("Greeting (or type 'exit' to quit): ")
-        if user_greeting == 'exit':
-            print('Exiting the program... GoodBye!')
-            break
-        result = greeting_response(user_greeting)
-        print(f'{result}')
-
+    user_input = input('Greeting: ')
+    result = greeting_response(user_input)
+    print(f'result')
 
 if __name__ == '__main__':
     main()
