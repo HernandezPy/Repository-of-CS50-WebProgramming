@@ -1,6 +1,6 @@
 def greeting_response(hello):
     greeting = hello.strip().lower()
-    if greeting.starstwith('hello'):
+    if greeting.startswith('hello'):
         return 0
     elif greeting.startswith('h'):
         return 20
