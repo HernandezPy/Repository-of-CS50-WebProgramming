@@ -1,8 +1,8 @@
 def greeting_response(hello):
     greeting = hello.strip().lower()
-    if greeting == 'hello':
+    if greeting.starstwith == 'hello':
         return 0
-    elif greeting == 'h':
+    elif greeting.startswith == 'h':
         return 20
     else:
         return 100
@@ -12,7 +12,7 @@ def main():
     while True:
         user_greeting = input("Greeting (or type 'exit' to quit): ")
         if user_greeting == 'exit':
-            print('Exiting the program')
+            print('Exiting the program... GoodBye!')
             break
         result = greeting_response(user_greeting)
         print(f'{result}')
