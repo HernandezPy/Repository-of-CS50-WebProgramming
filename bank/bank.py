@@ -1,8 +1,8 @@
 def greeting_response(hello):
     greeting = hello.strip().lower()
-    if greeting_response == 'hello':
+    if greeting == 'hello':
         return 0
-    elif greeting_response == 'h':
+    elif greeting == 'h':
         return 20
     else:
         return 100
