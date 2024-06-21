@@ -1,18 +1,16 @@
-def extensions():
-    insensitively = extensions.lower().strip()
-    valid_extensions = {
-        ['.gif', '.jpg', '.jpeg', '.png', '.pdf', '.txt', '.zip']
+def get_media_type(filename):
+    media_types = {
+        '.gif': 'image/gif',
+        '.jpg': 'image/jpeg',
+        '.jpeg': 'image/jpeg',
+        '.png': 'image/png',
+        '.pdf': 'application/pdf',
+        '.txt': 'text/plain',
+        '.zip': 'application/zip'
+
     }
-    if valid_extensions in insensitively:
-         return valid_extensions
-    else:
-         print('application/octet-stream')
 
+    filename = filename.lower()
 
-def main():
-    answer_input = input('File name: ')
-    result = valid_extensions(answer_input)
-    printcla(f'image/{valid_extensions}')
-
-if __name__ == '__main__':
- main()
+    for ext in media_types:
+        
