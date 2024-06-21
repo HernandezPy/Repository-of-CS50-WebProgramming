@@ -3,7 +3,7 @@ def extensions():
     valid_extensions = {
         ['.gif', '.jpg', '.jpeg', '.png', '.pdf', '.txt', '.zip']
     }
-    if valid_extensions in insensitively:
+    for valid_extensions in insensitively:
         print(f'image/{valid_extensions}')
     else:
          print('application/octet-stream')
