@@ -3,4 +3,4 @@ def extensions():
     valid_extensions = {
         ['.gif', '.jpg', '.jpeg', '.png', '.pdf', '.txt', '.zip']
     }
-    for 
+    if insen
