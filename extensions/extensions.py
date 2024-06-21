@@ -13,4 +13,5 @@ def get_media_type(filename):
     filename = filename.lower()
 
     for ext in media_types:
-        
+        if filename.endswith(ext):
+            return media_types[ext]
