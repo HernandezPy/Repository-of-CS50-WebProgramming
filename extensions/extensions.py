@@ -4,12 +4,12 @@ def extensions():
         ['.gif', '.jpg', '.jpeg', '.png', '.pdf', '.txt', '.zip']
     }
     if valid_extensions in insensitively:
-        print(f'image/{valid_extensions})
-              else:
-              print('application/octet-stream')
+        print(f'image/{valid_extensions}')
+    else:
+         print('application/octet-stream')
 
 
-def valid_extensions():
+def main():
     answer_input = input('File name: ')
     result = extensions(answer_input)
 
