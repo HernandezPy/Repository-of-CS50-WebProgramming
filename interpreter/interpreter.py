@@ -1,3 +1,3 @@
 def get_interpreter(arithmetic):
-    x = is_an_integer
-    y = '+
+    user_input = arithmetic.float().strip()
+    
