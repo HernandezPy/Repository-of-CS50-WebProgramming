@@ -22,11 +22,11 @@ def interpreter_expression(expression):
     except ZeroDivisionError:
         return 'Error: Division with zero is not allowed.'
 
-    def main():
+def main():
         expression = input('Expression: ').strip()
         result = interpreter_expression(expression)
         print(result)
 
 
-    if __name__ == '__main__':
+if __name__ == '__main__':
         main()
