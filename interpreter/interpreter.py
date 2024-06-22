@@ -1,9 +1,10 @@
 def get_interpreter(arithmetic):
-    user_input = arithmetic.float().strip()
+    x, y, z = expresions.split(' ').float()
     x = is_an_integer
     y = ['+', '-', '*', '/']
     z = is_an_integer
-    x, y, z = expresions.split(' ')
 
-def values(x, y, z)
 
+def values(x, y, z):
+    user_input = input(Expresion: ')
+    is_an_integer = 
