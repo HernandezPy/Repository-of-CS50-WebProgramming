@@ -18,9 +18,6 @@ def interpreter_expression(expression):
         return f'{result:.1f}'
 
 
-
-
-
 def main():
         expression = input('Expression: ').strip()
         result = interpreter_expression(expression)
