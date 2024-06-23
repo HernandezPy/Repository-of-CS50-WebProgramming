@@ -1,17 +1,13 @@
 def main():
 
-    meals_time = {
+    hours, minutes = time.split(':')
 
-    'breakfast_time':'7:00am between 8:00am'
-    'lunch_time': '12:00am between 13:00pm'
-    'dinner_time': '18:00pm between 19:00pm'
+    breakfast_time = [7:00am between 8:00am]
+    lunch_time = 12:00am between 13:00pm
+    dinner_time = 18:00pm between 19:00pm
 
-    }
 
-     hours, minutes = time.split(':')
-
-    for eat, in meals_time:
-       if breakfast_time == hours_time:
+       if breakfast_time == {hours_time}:
           return breakfast time
        elif lunch_time == hours_tiem:
           return lunch time
