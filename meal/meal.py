@@ -1,11 +1,10 @@
 def main():
 
-    hours, minutes = time.split(':')
-
     breakfast_time = 7:00 between 8:00
     lunch_time = 12:00 between 13:00
     dinner_time = 18:00 between 19:00
 
+    hours, minutes = time.split(':')
 
        if breakfast_time == hours_time:
           return breakfast time
