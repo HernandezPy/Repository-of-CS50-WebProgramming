@@ -1,6 +1,6 @@
 def main():
 
-    breakfast_time = hours_to_eat(7:00am between 8:00am)
+    breakfast_time = hours_to_eat(7 between 8)
     lunch_time = hours_to_eat(12:00am between 13:00pm)
     dinner_time = hours_to_eat(18:00pm between 19:00pm)
 
@@ -18,7 +18,7 @@ def main():
 
 def convert(time):
    user_inputs: input('What time is it? ')
-   result = meals_time(user_input)
+   result = breakfast_time(user_input)
    print('result')
 
 
