@@ -1,5 +1,4 @@
 def interpreter_expression(expression):
-     try:
 
         x, y, z = expression.split()
 
@@ -18,10 +17,7 @@ def interpreter_expression(expression):
             return 'Error: Invalid operator.'
         return f'{result:.1f}'
 
-     except ValueError:
-        return "Error: Invalid input. Ensure the input is  formatted as 'x y z' where x and z are integers and y an operator (+,-,*,/)."
-     except ZeroDivisionError:
-        return 'Error: Division with zero is not allowed.'
+
 
 
 
