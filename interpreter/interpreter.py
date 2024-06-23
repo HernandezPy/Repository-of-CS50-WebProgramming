@@ -1,7 +1,7 @@
 def interpreter_expression(expression):
      try:
 
-        x, y, z, = expression.split()
+        x, y, z = expression.split()
 
         x = int(x)
         y = int(y)
