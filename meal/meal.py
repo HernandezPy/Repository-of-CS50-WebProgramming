@@ -9,7 +9,7 @@ def main():
 
      hours, minutes = time.split(':')
 
-    for meals_time, in hours_time:
+    for , in hours_time:
        if breakfast_time == hours_time:
           return breakfast time
        elif lunch_time == hours_tiem:
@@ -18,8 +18,14 @@ def main():
           return dinner time
        else:
           pass
-       return f'conver.time:.1f'
+       return f'{conver.time:.1f}'
 
 def convert(time):
    user_inputs: input('What time is it? ').float()
+   result = meals_time(user_input)
+   print('result')
+
+
+if __name__ == '__main__':
+   main()
 
