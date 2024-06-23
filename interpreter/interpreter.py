@@ -7,13 +7,13 @@ def interpreter_expression(expression):
         z = int(z)
 
         if y == '+':
-            return x + z
+            result = x + z
         elif y == '-':
-            return x - z
+            result = x - z
         elif y == '*':
-            return x * z
+            result = x * z
         elif y == '/':
-            return x / z
+            result = x / z
         else:
             return 'Error: Invalid operator.'
         return f'{result:.1f}'
