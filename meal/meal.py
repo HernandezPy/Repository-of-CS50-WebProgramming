@@ -1,12 +1,12 @@
 def main():
 
-    breakfast_time = 7:00 between 8:00
-    lunch_time = 12:00 between 13:00
-    dinner_time = 18:00 between 19:00
+    breakfast_time = hours_to_eat(7:00am between 8:00am)
+    lunch_time = hours_to_eat(12:00am between 13:00pm)
+    dinner_time = hours_to_eat(18:00pm between 19:00pm)
 
     hours, minutes = time.split(':')
 
-       if breakfast_time == hours_time:
+       if breakfast_time == hours_to_eat:
           return breakfast time
        elif lunch_time == hours_tiem:
           return lunch time
@@ -17,7 +17,7 @@ def main():
        return f'{conver.time:.1f}'
 
 def convert(time):
-   user_inputs: input('What time is it? ').float()
+   user_inputs: input('What time is it? ')
    result = meals_time(user_input)
    print('result')
 
