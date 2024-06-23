@@ -4,7 +4,7 @@ def interpreter_expression(expression):
         x, y, z = expression.split()
 
         x = int(x)
-        z = int(y)
+        z = int(z)
 
         if y == '+':
             return x + z
