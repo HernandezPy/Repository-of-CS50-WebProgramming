@@ -18,6 +18,7 @@ def main():
           return dinner time
        else:
           pass
+       return f'conver.time:.1f'
 
 def convert(time):
    user_inputs: input('What time is it? ').float()
