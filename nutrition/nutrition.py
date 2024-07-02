@@ -22,11 +22,11 @@ fruits_calories = {
   }
 
 def main():
-    fruit = input('Item: ').strip().lower()
+    fruit = input('Item: ').strip().lower().capitalize()
     if fruit in fruits_calories:
          print(f'Calories: {fruits_calories[fruit]}')
-      else:
-           print('Item no valid')
+    else:
+        print('Item no valid')
 
 if __name__ == '__main__':
  main()
