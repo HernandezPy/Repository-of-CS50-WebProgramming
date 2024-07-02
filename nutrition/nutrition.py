@@ -25,8 +25,8 @@ def main():
     fruit = input('Item: ').strip().lower()
     if fruit in fruits_calories:
          print(f'Calories: {fruits_calories[fruit]}')
-    else:
-        pass
+      else:
+           print('Item no valid')
 
 if __name__ == '__main__':
  main()
