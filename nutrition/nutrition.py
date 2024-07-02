@@ -18,7 +18,7 @@ fruits_calories = {
     'Sweet Cherries': 100,
     'Tangerine': 50,
     'Watermelon': 80
-    
+
   }
 
 def main():
@@ -30,14 +30,4 @@ def main():
 
 if __name__ == '__main__':
  main()
-}
 
-def main():
- fruit = input('Item: ').strip().lower()
- if fruit in fruits_calories:
- print(f'Calories: {fruits_calories[fruit]}')
- else:
-    pass
-
-if __name__ == '__main__':
- main()
