@@ -1,6 +1,6 @@
 fruits_calories = {
 
-    'Apples': 130,
+    'Apple': 130,
     'Avocado': 50,
     'Bananas': 110,
     'Cantaloupe': 50,
@@ -22,11 +22,11 @@ fruits_calories = {
   }
 
 def main():
-    fruit = input('Item: ').strip().lower().capitalize()
+    fruit = input('Item: ').strip().title()
     if fruit in fruits_calories:
          print(f'Calories: {fruits_calories[fruit]}')
     else:
-        print('Item no valid')
+        pass
 
 if __name__ == '__main__':
  main()
