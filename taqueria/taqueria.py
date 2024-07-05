@@ -1,6 +1,6 @@
 def main():
     menu = {
-        "Baja Taco": 4.00,
+        "Baja Taco": 4.25,
         "Burrito": 7.50,
         "Bowl": 8.50,
         "Nachos": 11.00,
