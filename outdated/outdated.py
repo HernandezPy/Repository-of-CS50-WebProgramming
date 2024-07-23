@@ -19,6 +19,7 @@ def convert_date(date_str):
         month, day, year = date_str.split('/')
         month = month.zfill(2)  # ensure the month has two digits
         day = day.zfill(2)  # ensure the day has two digits
+        
    except ValueError:
        # if slashes are not present, try splitting by spaces
         raise ValueError('Date format is incorrect')
@@ -29,7 +30,7 @@ def main():
     date_str = input('Date: ')
     try:
         formatted_date = convert_date(date_str)
-        print('ISO 8601 formatted date:', formatted_date)
+        print(formatted_date)
     except ValueError as e:
         print(e)
 
