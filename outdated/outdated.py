@@ -19,9 +19,10 @@ def convert_date(date_str):
         month, day, year = date_str.split('/')
         month = month.zfill(2)  # ensure the month has two digits
         day = day.zfill(2)  # ensure the day has two digits
-   except (EOFError, ValueError):
+   except EOFError:
+       pass
        # if slashes are not present, try splitting by spaces
-        raise ValueError('Date format is incorrect')
+
    return f'{year}-{month}-{day}'
 
 
