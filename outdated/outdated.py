@@ -36,7 +36,7 @@ def main():
             print(converted_date)
             break
         else:
-            print("Invalid date format. Please try again.")
+           pass
 
 if __name__ == "__main__":
     main()
