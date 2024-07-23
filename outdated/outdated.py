@@ -21,7 +21,7 @@ def convert_date(date_str):
         day = day.zfill(2)  # ensure the day has two digits
    except (EOFError, ValueError):
        # if slashes are not present, try splitting by spaces
-        raise ValueError('Date format is incorrect')
+        pass
    return f'{year}-{month}-{day}'
 
 
