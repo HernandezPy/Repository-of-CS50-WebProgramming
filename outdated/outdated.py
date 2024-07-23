@@ -30,7 +30,7 @@ def convert_date(date_str):
 
 def main():
     while True:
-        date_str = input("Enter a date (MM/DD/YYYY or Month D, YYYY): ").strip()
+        date_str = input("Date: ").strip()
         converted_date = convert_date(date_str)
         if converted_date:
             print(converted_date)
