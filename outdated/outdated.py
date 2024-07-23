@@ -1,39 +1,42 @@
+# outdated.py
+import re
+
+# List of month names
+months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+]
+
 def convert_date(date_str):
-    # Define month mapping
-   MONTHS = {
-       'January': '01',
-       'February': '02',
-       'March': '03',
-       'April': '04',
-       'May': '05',
-       'June': '06',
-       'July': '07',
-       'August': '08',
-       'September': '09',
-       'October': '10',
-       'November': '11',
-       'December': '12'
-   }
-   # Try to split the date by slashes
-   try:
-        month, day, year = date_str.split('/')
-        month = month.zfill(2)  # ensure the month has two digits
-        day = day.zfill(2)  # ensure the day has two digits
-   except EOFError:
-       pass
-       # if slashes are not present, try splitting by spaces
+    # Regular expressions for matching date formats
+    numeric_date_pattern = re.compile(r"^(1[0-2]|[1-9])/([1-2][0-9]|3[0-1]|[1-9])/(\d{4})$")
+    named_date_pattern = re.compile(r"^(January|February|March|April|May|June|July|August|September|October|November|December) ([1-2][0-9]|3[0-1]|[1-9]), (\d{4})$")
 
-   return f'{year}-{month}-{day}'
+    # Check if the input matches numeric date pattern
+    numeric_match = numeric_date_pattern.match(date_str)
+    if numeric_match:
+        month, day, year = numeric_match.groups()
+        return f"{year}-{int(month):02d}-{int(day):02d}"
 
+    # Check if the input matches named date pattern
+    named_match = named_date_pattern.match(date_str)
+    if named_match:
+        month_name, day, year = named_match.groups()
+        month = months.index(month_name) + 1
+        return f"{year}-{month:02d}-{int(day):02d}"
+
+    # If the input doesn't match any pattern, return None
+    return None
 
 def main():
-    date_str = input('Date: ')
-    try:
-        formatted_date = convert_date(date_str)
-        print(formatted_date)
-    except ValueError as e:
-        print(e)
+    while True:
+        date_str = input("Enter a date (MM/DD/YYYY or Month D, YYYY): ").strip()
+        converted_date = convert_date(date_str)
+        if converted_date:
+            print(converted_date)
+            break
+        else:
+            print("Invalid date format. Please try again.")
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
