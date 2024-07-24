@@ -4,7 +4,7 @@ def emojize_text(text):
     return emoji.emojize(text, language='alias')
 
 
-def min():
+def main():
     user_input = input('Input: ')
     emojized_text = emojize_text(user_input)
     print('Output: ', emojize_text)
