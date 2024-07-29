@@ -25,10 +25,10 @@ def main():
 
 if __name__ == "__main__":
     if len(sys.argv) not in [1, 3]:
-        sys.exit("")
+        sys.exit("Invalid usage")
 
     if len(sys.argv) == 3:
         if sys.argv[1] not in ["-f", "--font"]:
-            sys.exit("Usege: figlet.py or figlet.py -f FONT")
+            sys.exit("invalid usage")
 
     main()
