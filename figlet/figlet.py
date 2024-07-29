@@ -20,7 +20,7 @@ def main():
 
     figlet.setFont(font=font)
     text = input("Input: ")
-    print(figlet.renderText(text))
+    print(output(text))
 
 
 if __name__ == "__main__":
