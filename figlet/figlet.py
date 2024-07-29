@@ -6,7 +6,7 @@ import argparse
 def main():
     figlet = Figlet()
     available_fonts = figlet.getFonts()
-    parser = argparse.ArgumentParser(description="Generate texxt in a FIGlet font.")
+    parser = argparse.ArgumentParser(description="Generate text in a FIGlet font.")
     parser.add_argument("-f", "--font", help="specify the font to use", type=str, required=False)
     args = parser.parse_args()
 
@@ -25,7 +25,7 @@ def main():
 
 if __name__ == "__main__":
     if len(sys.argv) not in [1, 3]:
-        sys.exit("Usege: figlet.py or figlet.py -f FONT")
+        sys.exit("")
 
     if len(sys.argv) == 3:
         if sys.argv[1] not in ["-f", "--font"]:
