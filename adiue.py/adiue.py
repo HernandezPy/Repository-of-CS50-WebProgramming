@@ -15,7 +15,7 @@ def main():
         pass
 
     # Generate the farewell message
-    farewell_message = generate_farewell(name)
+    farewell_message = generate_farewell(names)
     print(farewell_message)
 
 
