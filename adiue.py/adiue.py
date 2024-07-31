@@ -6,11 +6,11 @@ def main():
     print("Enter names (Ctrl-D to end):")
 
     # Reading names until Ctrl-D (EOF) is encountered
-    name = []
+    names = []
     try:
         while True:
             name = input()
-            name.append(name)
+            names.append(name)
     except EOFError:
         pass
 
@@ -27,6 +27,6 @@ def generate_farewell(names):
         # Use inflect to create the list with proper grammar
         names_list = p.join(names)
         return f"Adieu, adieu, to {names_list}"
-    
+
 if __name__ == "__main__":
     main()
