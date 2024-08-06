@@ -8,7 +8,7 @@ def get_positive_integer(prompt):
             if value > 0:
                 return value
         except ValueError:
-            print("Please enter a positive integer.")
+            pass
 
 
 def main():
