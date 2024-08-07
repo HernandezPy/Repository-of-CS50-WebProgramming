@@ -1,20 +1,53 @@
-print("Bienvenido a nuestro verificador en linia")
+import random
 
-age = int(input("Enter your age: "))
-has_license = input("Do you have license? [Y/N]: ")
+def main():
+    level = get_level()
+    score = 0
 
-has_license == has_license.lower() == "y"
-salary = int(input("Enter your salary: "))
+    for n in range(10):
+        x = generate_integer(level)
+        y = generate_integer(level)
+        correct_answer = x + y
+        print(f"{x} + {y} = ", end=""
 
-if age <= 35:
-    print("Your age it's okey")
-    if has_license == "yes":
-        print("Valid license")
-        if salary >= 3500:
-            print("Perfect! you're eligible")
-        else:
-            print("You are not eligible")
+        tries = 0
+        while tries < 3:
+           try:
+              user_answer = int(input())
+              if user_answer == correct_answer:
+                score += 1
+                break
+              else:
+                print("EEE")
+           except ValueError:
+              print("EEE")
+           tries += 1
+        if tries == 3:
+           print(f"{x} + {y} = {correct_answer}")
+    print(f"Score: {score}/10")
+
+def get_level():
+    while True:
+       try:
+          level = int(input("level: "))
+          if level in [1, 2, 3]:
+              return level
+       except ValueError:
+          pass
+
+
+def generate_integer(level):
+    if level = 1:
+        return random.ranint(0, 9)
+    elif level == 2:
+        return random.ranint(10, 99)
+    elif level == 3:
+        return random.ranint(100, 999)
     else:
-        print("Sorry, you need a valid license")
-else:
-    print("You are over our age limit")
+        raise ValueError("Level must be 1, 2, 3")
+
+
+if __name__ == "__main__":
+    main()
+
+
