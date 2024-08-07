@@ -37,7 +37,7 @@ def get_level():
 
 
 def generate_integer(level):
-    if level = 1:
+    if level == 1:
         return random.ranint(0, 9)
     elif level == 2:
         return random.ranint(10, 99)
