@@ -8,7 +8,7 @@ def main():
         x = generate_integer(level)
         y = generate_integer(level)
         correct_answer = x + y
-        print(f"{x} + {y} = ", end=""
+        print(f"{x} + {y} = ", end="")
 
         tries = 0
         while tries < 3:
