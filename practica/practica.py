@@ -38,11 +38,11 @@ def get_level():
 
 def generate_integer(level):
     if level == 1:
-        return random.ranint(0, 9)
+        return random.randint(0, 9)
     elif level == 2:
-        return random.ranint(10, 99)
+        return random.randint(10, 99)
     elif level == 3:
-        return random.ranint(100, 999)
+        return random.randint(100, 999)
     else:
         raise ValueError("Level must be 1, 2, 3")
 
