@@ -4,7 +4,7 @@ def main():
     level = get_level()
     score = 0
 
-    for n in range(10):
+    for _ in range(10):
         x = generate_integer(level)
         y = generate_integer(level)
         correct_answer = x + y
