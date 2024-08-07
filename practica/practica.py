@@ -11,7 +11,7 @@ else:
 salary = int(input("Enter your salary: "))
 if age <= 35:
     print("Your age it's okey")
-    if has_license:
+    if has_license == "yes":
         print("Valid license")
         if salary >= 3500:
             print("Perfect! you're eligible")
