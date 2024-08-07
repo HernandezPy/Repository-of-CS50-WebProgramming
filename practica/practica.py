@@ -3,12 +3,9 @@ print("Bienvenido a nuestro verificador en linia")
 age = int(input("Enter your age: "))
 has_license = input("Do you have license? [Y/N]: ")
 
-if has_license.lower() == "y/n":
-    has_license = True
-else:
-    has_license = False
-
+has_license == has_license.lower() == "y"
 salary = int(input("Enter your salary: "))
+
 if age <= 35:
     print("Your age it's okey")
     if has_license == "yes":
