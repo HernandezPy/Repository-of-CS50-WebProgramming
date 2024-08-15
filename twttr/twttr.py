@@ -1,6 +1,6 @@
 def main():
     user_input = input('input: ').strip()
-    print(remove_vowels(user_input))
+    print(shorten(user_input))
 
 
 def shorten(word):

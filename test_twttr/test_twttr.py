@@ -1,6 +1,7 @@
-import twttr
+from twttr import shorten
 
-def test_twttr()
+def test_twttr():
+    assert shorten()
 
 
 
