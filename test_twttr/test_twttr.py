@@ -1,12 +1,6 @@
 import twttr
 
-def main():
-    
-
-
-def shorten(word)
+def test_twttr()
 
 
 
-if __name__ == "__main__":
-    main()
