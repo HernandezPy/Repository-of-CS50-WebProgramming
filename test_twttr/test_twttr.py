@@ -1,7 +1,7 @@
 from twttr import shorten
 
 def test_twttr():
-    assert shorten()
+    assert shorten(a) == 
 
 
 
