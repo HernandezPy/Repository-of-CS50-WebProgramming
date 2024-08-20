@@ -19,7 +19,7 @@ def test_shorten_empty_string():
 def test_shorten_omitting_numbers():
     assert shorten("h3ll0") == "h3ll0"
     assert shorten("tw3tt3r") == "tw3tt3r"
-    assert shorten("appl3") == "appl3"
+    assert shorten("appl3") == "ppl3"
 
 
 
