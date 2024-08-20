@@ -12,3 +12,6 @@ def test_shorten_uppercase():
     assert shorten("HELLO") == "HLL"
     assert shorten("TWITTER") == "TWTTR"
     assert shorten("APPLE") == "PPL"
+
+def test_empty_string():
+    assert shorten("") == ""
