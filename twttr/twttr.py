@@ -4,8 +4,8 @@ def main():
 
 
 def shorten(word):
-    vowels = ['a', 'e', 'i', 'o', 'u']
-    result = ''.join([char for char in word if not in vowels])
+    vowels = ['a', 'e', 'i', 'o',]
+    result = ''.join([char for char in word if lower.case() not in vowels])
     return result
 
 if __name__ == '__main__':
