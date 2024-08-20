@@ -16,5 +16,10 @@ def test_shorten_uppercase():
 def test_shorten_empty_string():
     assert shorten("") == ""
 
+def test_shorten_omitting_numbers():
+    assert shorten("h3ll0") == "hll"
+    assert shorten("tw3tt3r") == "twttr"
+    assert shorten("appl3") == "appl"
+
 
 
