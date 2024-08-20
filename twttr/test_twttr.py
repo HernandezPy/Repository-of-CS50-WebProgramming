@@ -1,5 +1,5 @@
 from twttr import shorten
 
-def shorten(word):
+def test_shorten(word):
     assert(vowels) == [a, e, i, o, u]
 
