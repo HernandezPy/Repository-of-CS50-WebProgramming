@@ -16,9 +16,11 @@ def test_shorten_uppercase():
 def test_shorten_empty_string():
     assert shorten("") == ""
 
-def test_with_numbers():
+def test_shorten_with_numbers():
     assert shorten(h3ll0) == "h3ll0"
     assert shorten(tw3tt3r) == "tw3tt3r"
     assert shorten(appl3) == "ppl3"
 
-def test_
+def test_shorten_no_vowels():
+    assert shorten(gym) == "gym"
+    assert shorten(crypt) == "crypt"
