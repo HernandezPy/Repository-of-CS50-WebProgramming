@@ -25,6 +25,3 @@ def test_shorten_no_vowels():
     assert shorten(gym) == "gym"
     assert shorten(crypt) == "crypt"
 
-
-if __name__ == "__main__":
-    main()
