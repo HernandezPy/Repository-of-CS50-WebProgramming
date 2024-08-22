@@ -15,3 +15,7 @@ def test_value_no_h():
     assert value("Good morning") == 100
     assert value("What's up") == 100
     assert value("welcome") == 100
+
+def test_value_case_insensitivity():
+    
+
