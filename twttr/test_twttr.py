@@ -21,5 +21,6 @@ def test_shorten_omitting_numbers():
     assert shorten("tw3tt3r") == "tw3tt3r"
     assert shorten("appl3") == "ppl3"
 
+def test_shorten_
 
 
