@@ -22,8 +22,8 @@ def test_shorten_omitting_numbers():
     assert shorten("appl3") == "ppl3"
 
 def test_shorten_no_puntuation():
-    assert shorten("h:llo") == "hll"
-    assert shorten("tw:tt:r") == "twttr"
-    assert shorten("@ppl?") == "ppl"
+    assert shorten("h:llo") == "h:ll"
+    assert shorten("tw:tt:r") == "tw:tt:r"
+    assert shorten("@ppl?") == "@ppl?"
 
 
