@@ -3,7 +3,7 @@ from plates import is_valid
 def test_number_placement():
     assert is_valid("aad13") == True
 
-def test_invalid_characters():
+def test_zero_placement():
     assert is_valid("@dd14") == False
 
 def test_beginning_alphabetical():
