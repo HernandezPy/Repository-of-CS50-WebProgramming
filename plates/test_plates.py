@@ -1,3 +1,4 @@
 from plates import is_valid
 
-def is_valid_
+def is_valid_two_letters():
+    assert is_valid(aa)
