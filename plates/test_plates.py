@@ -13,4 +13,4 @@ def test_numbers_at_ends():
     assert is_valid("mmm123") == True
 
 def test_alphanumeric_characters():
-    assert is_valid(")
+    assert is_valid("yes123")
