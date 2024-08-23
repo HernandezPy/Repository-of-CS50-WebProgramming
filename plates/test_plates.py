@@ -6,7 +6,7 @@ def test_number_placement():
 def test_zero_placement():
     assert is_valid("ddd140") == True
 
-def test_no_beginning_alphabetical():
+def test_without_beginning_alphabetical():
     assert is_valid("132aaa") == False
 
 def test_numbers_at_ends():
