@@ -4,7 +4,7 @@ def test_number_placement():
     assert is_valid("aad13") == True
 
 def test_zero_placement():
-    assert is_valid("ddd140") == False
+    assert is_valid("ddd140") == True
 
 def test_beginning_alphabetical():
     assert is_valid("aei") == True
