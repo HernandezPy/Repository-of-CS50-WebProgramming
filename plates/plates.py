@@ -8,7 +8,12 @@ def main():
 
 
 def is_valid(s):
-    
+    plate = input('Plate: ').strip()
+    if is_valid(plate):
+        print('valid')
+    else:
+        print('invalid')
+
 def starts_with_two_letters(s):
     return len(s) >= 2 and s[:2].isalpha()
 
