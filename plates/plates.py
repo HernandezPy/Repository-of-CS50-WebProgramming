@@ -3,8 +3,7 @@ def main():
         starts_with_two_letters(s) and
         correct_length(s) and
         numbers_at_end(s) and
-        no_invalid_characters)(s)
-    )
+        no_invalid_characters)(s))
 
 
 def is_valid(s):
