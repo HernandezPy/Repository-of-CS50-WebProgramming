@@ -1,9 +1,9 @@
 def main():
-    plate = input('Plate: ').strip()
-    if is_valid(plate):
-        print('valid')
-    else:
-        print('invalid')
+    return (
+        starts_with_two_letters(s) and
+        correct_lengt(s) and
+        numbers_at_
+    )
 
 
 def is_valid(s):
