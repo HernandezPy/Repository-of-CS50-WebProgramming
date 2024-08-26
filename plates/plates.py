@@ -1,18 +1,14 @@
 def main():
     return (
         starts_with_two_letters(s) and
-        correct_lengt(s) and
-        numbers_at_
+        correct_length(s) and
+        numbers_at_end(s) and
+        no_invalid_characters)(s)
     )
 
 
 def is_valid(s):
-    return (
-    starts_with_two_letters(s) and
-    correct_length(s) and
-    numbers_at_end(s) and
-    no_invalid_characters(s)
-   )
+    
 def starts_with_two_letters(s):
     return len(s) >= 2 and s[:2].isalpha()
 
