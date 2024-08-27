@@ -1,9 +1,11 @@
 from fuel import get_fuel_fraction
 
 def test_right_fractions():
-    assert get_fuel_fraction("1/4") ==
-    assert get_fuel_fraction("1/2") == 50%
-    assert get_fuel_fraction(")
+    assert get_fuel_fraction("0/1") == E
+    assert get_fuel_fraction("1/4") == 25
+    assert get_fuel_fraction("1/2") == 50
+    assert get_fuel_fraction("3/4") == 75
+    assert get_fuel_fraction("4/4") == F
 
 def test_error_zero():
     with pytest.raise(ZeroDivisionError):
