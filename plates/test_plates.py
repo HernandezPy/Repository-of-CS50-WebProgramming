@@ -23,3 +23,6 @@ def test_is_valid():
     assert is_valid("A12345") == False
     assert is_valid("AB12345") == False
     assert is_valid("AB@123") == False
+
+def test_zero_placement():
+    assert is_valid(")
