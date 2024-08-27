@@ -9,7 +9,7 @@ def test_right_fractions():
 
 def test_error_zero():
     with pytest.raise(ZeroDivisionError):
-        get_fuel_fraction("0")
+        get_fuel_fraction("0/0")
 
 def test_error():
     with pytest.raise(ValueError):
