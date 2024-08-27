@@ -8,10 +8,8 @@ def test_right_fractions():
     assert get_fuel_fraction("4/4") == F
 
 def test_error_zero():
-    with pytest.raise(ZeroDivisionError):
-        get_fuel_fraction("0/0")
+    assert get_fuel_fraction("0/0") == "ZeroDivionError"
 
 def test_error():
-    with pytest.raise(ValueError):
-        get_fuel_fraction("200/3")
+    assert get_fuel_fraction("200/3") == "ValueError"
 
