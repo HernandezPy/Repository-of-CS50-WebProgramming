@@ -1,5 +1,5 @@
 import pytest
-from fuel import get_fuel_fraction
+from fuel import convert, gauge
 
 def test_right_fractions():
     assert get_fuel_fraction("0/1") == 0
@@ -8,7 +8,7 @@ def test_right_fractions():
     assert get_fuel_fraction("3/4") == 75.0
     assert get_fuel_fraction("4/4") == 100.0
 
-def test_error_zero():
+def test_error_zero():_
     with pytest.raises(ZeroDivisionError):
         get_fuel_fraction("1/0")
 
