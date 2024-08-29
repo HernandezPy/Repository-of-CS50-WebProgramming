@@ -10,17 +10,23 @@ def get_fuel_fraction(fraction):
             percentage = (x / y) * 100
             return percentage
         except (ValueError, ZeroDivisionError):
-            pass
+            raise
 
 
 def main():
-    percentage = get_fuel_fraction()
-    if percentage <= 1:
-        print('E')
-    elif percentage >= 99:
-        print('F')
-    else:
-        print(f'{round(percentage)}%')
+    while True:
+        try:
+             fraction = input("Fraction: ")
+             percentage = get_fuel_fraction(fraction)
+             if percentge <= 1:
+                  print("E")
+             elif percentage >= 99:
+                  print("F")
+             else:
+                  print(f"{round(percentage)}%")
+             break
+        except (ValueError, ZeroDivisionError):
+             pass
 
 
 if __name__ == '__main__':
