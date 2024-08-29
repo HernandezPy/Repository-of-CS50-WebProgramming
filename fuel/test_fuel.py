@@ -17,13 +17,13 @@ def test_error():
         get_fuel_fraction("5/3")
 
 def test_invalid_fraction():
-    with pytest.raises(alueError):
+    with pytest.raises(ValueError):
         get_fuel_fraction("200/3")
-    with pytest.raises(valueError):
+    with pytest.raises(ValueError):
         get_fuel_fraction("a/b")
-    with pytest.raises(valueError):
+    with pytest.raises(ValueError):
         get_fuel_fraction("1/one")
-    with pytest.raises(valueError):
+    with pytest.raises(ValueError):
         get_fuel_fraction("1/2/3")
-    with pytest.raises(valueError):
+    with pytest.raises(ValueError):
         get_fuel_fraction("3/-2")
