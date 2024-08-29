@@ -8,7 +8,7 @@ def test_right_fractions():
     assert convert, gauge("3/4") == 75.0
     assert convert, gauge("4/4") == 100.0
 
-def test_error_zero():_
+def test_error_zero():
     with pytest.raises(ZeroDivisionError):
         convert, gauge("1/0")
 
