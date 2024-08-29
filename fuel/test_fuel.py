@@ -2,15 +2,15 @@ import pytest
 from fuel import convert, gauge
 
 def test_right_fractions():
-    assert convert, gauge("0/1") == "E"
-    assert convert, gauge("1/4") == 25%
-    assert convert, gauge("1/2") == 50%
-    assert convert, gauge("3/4") == 75%
-    assert convert, gauge("4/4") == "F"
+    assert gauge("0/1") == "E"
+    assert gauge("1/4") == 25%
+    assert gauge("1/2") == 50%
+    assert gauge("3/4") == 75%
+    assert gauge("4/4") == "F"
 
 def test_error_zero():
     with pytest.raises(ZeroDivisionError):
-        convert, gauge("0/0")
+        convert("0/0")
 
 def test_error():
     with pytest.raises(ValueError):
