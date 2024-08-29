@@ -10,7 +10,7 @@ def test_right_fractions():
 
 def test_error_zero():
     with pytest.raises(ZeroDivisionError):
-        convert, gauge("1/0")
+        convert, gauge("0/0")
 
 def test_error():
     with pytest.raises(ValueError):
