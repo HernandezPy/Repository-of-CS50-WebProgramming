@@ -1,7 +1,5 @@
-def get_fuel_fraction():
-    while True:
+def get_fuel_fraction(fraction):
         try:
-            fraction = input('Fraction: ')
             x, y = fraction.split('/')
             x = int(x)
             y = int(y)
