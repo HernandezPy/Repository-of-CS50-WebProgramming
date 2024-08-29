@@ -1,4 +1,15 @@
-def get_fuel_fraction(fraction):
+
+def main():
+    while True:
+        try:
+             fraction = input("Fraction: ")
+             percentage = convert(fraction)
+             print(gauge(percentage))
+             break
+        except (ValueError, ZeroDivisionError):
+             pass
+        
+def convert(fraction):
         try:
             x, y = fraction.split('/')
             x = int(x)
@@ -13,20 +24,6 @@ def get_fuel_fraction(fraction):
             raise
 
 
-def main():
-    while True:
-        try:
-             fraction = input("Fraction: ")
-             percentage = get_fuel_fraction(fraction)
-             if percentge <= 1:
-                  print("E")
-             elif percentage >= 99:
-                  print("F")
-             else:
-                  print(f"{round(percentage)}%")
-             break
-        except (ValueError, ZeroDivisionError):
-             pass
 
 
 if __name__ == '__main__':
