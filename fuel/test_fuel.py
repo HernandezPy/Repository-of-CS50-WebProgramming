@@ -10,9 +10,20 @@ def test_right_fractions():
 
 def test_error_zero():
     with pytest.raises(ZeroDivisionError):
-        get_fuel_fraction("0/0")
+        get_fuel_fraction("1/0")
 
 def test_error():
     with pytest.raises(ValueError):
-        get_fuel_fraction("200/3")
+        get_fuel_fraction("5/3")
 
+def test_invalid_fraction():
+    with pytes.raises(valueErro):
+        get_fuel_fraction("200/3")
+    with pytes.raises(valueErro):
+        get_fuel_fraction("a/b")
+    with pytes.raises(valueErro):
+        get_fuel_fraction("1/one")
+    with pytes.raises(valueErro):
+        get_fuel_fraction("1/2/3")
+    with pytes.raises(valueErro):
+        get_fuel_fraction("3/-2")
