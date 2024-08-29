@@ -18,12 +18,12 @@ def test_error():
 
 def test_invalid_fraction():
     with pytest.raises(ValueError):
-        get_fuel_fraction("200/3")
+        convert, gauge("200/3")
     with pytest.raises(ValueError):
-        get_fuel_fraction("a/b")
+        convert, gauge("a/b")
     with pytest.raises(ValueError):
-        get_fuel_fraction("1/one")
+        convert, gauge("1/one")
     with pytest.raises(ValueError):
-        get_fuel_fraction("1/2/3")
+        convert, gauge("1/2/3")
     with pytest.raises(ValueError):
-        get_fuel_fraction("3/-2")
+        convert, gauge("3/-2")
