@@ -18,7 +18,7 @@ def convert(fraction):
                 raise ZeroDivisionError
             if x > y:
                 raise ValueError
-            percentage = ((x / y) * 100)
+            percentage = round((x / y) * 100)
             return percentage
         except (ValueError, ZeroDivisionError):
             raise
@@ -30,7 +30,7 @@ def gauge(percentage):
        elif percentage >= 99:
           print("F")
        else:
-          print(f'{round(percentage)}%')
+          print(f'{percentage}%')
 
 
 if __name__ == '__main__':
