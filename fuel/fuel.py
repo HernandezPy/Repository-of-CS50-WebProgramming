@@ -25,13 +25,13 @@ def convert(fraction):
             raise
 
 def gauge(percentage):
-       percentage = convert()
+       percentage = convert(fraction)
        if percentage <= 1:
           print("E")
        elif percentage >= 99:
           print("F")
        else:
-          print(f'{percentage}%')
+          print(f'{round(percentage)}%')
 
 
 if __name__ == '__main__':
