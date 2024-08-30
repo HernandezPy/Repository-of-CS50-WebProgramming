@@ -11,6 +11,8 @@ def main():
 
 def convert(fraction):
         try:
+            if fraction.count('/') != 1:
+                raise ValueError("Expected 'x/y'.")
             x, y = fraction.split('/')
             x = int(x)
             y = int(y)
