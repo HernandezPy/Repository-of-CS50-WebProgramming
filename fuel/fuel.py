@@ -10,9 +10,7 @@ def main():
                pass
 
 def convert(fraction):
-        try:
-            if fraction.count('/') != 1:
-                raise ValueError("Expected 'x/y'.")
+        try:hhoe
             x, y = fraction.split('/')
             x = int(x)
             y = int(y)
