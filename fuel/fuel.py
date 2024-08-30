@@ -1,15 +1,15 @@
 
 def main():
-        try:
-             fraction = input("Fraction: ")
-             percentage = convert(fraction)
-             print(gauge(percentage))
-             break
-        except (ValueError, ZeroDivisionError):
-             pass
+        while True:
+            try:
+               fraction = input("Fraction: ")
+               percentage = convert(fraction)
+               print(gauge(percentage))
+               break
+            except (ValueError, ZeroDivisionError):
+               pass
 
 def convert(fraction):
-      while True:
         try:
             x, y = fraction.split('/')
             x = int(x)
