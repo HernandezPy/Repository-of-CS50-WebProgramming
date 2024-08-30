@@ -10,6 +10,7 @@ def main():
              pass
 
 def convert(fraction):
+      while True:
         try:
             x, y = fraction.split('/')
             x = int(x)
@@ -18,13 +19,13 @@ def convert(fraction):
                 raise ZeroDivisionError
             if x > y:
                 raise ValueError
-            percentage = round((x / y) * 100)
+            percentage = (x / y) * 100
             return percentage
         except (ValueError, ZeroDivisionError):
             raise
 
 def gauge(percentage):
-       percentage = int(percentage)
+       percentage = convert()
        if percentage <= 1:
           print("E")
        elif percentage >= 99:
