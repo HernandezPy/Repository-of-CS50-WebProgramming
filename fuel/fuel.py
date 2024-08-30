@@ -24,15 +24,13 @@ def convert(fraction):
             raise
 
 def gauge(percentage):
-    try:
+       percentage = int(percentage)
        if percentage <= 1:
           return "E"
        elif percentage >= 99:
           return "F"
        else:
           return f"{percentage}%"
-    except (TypeError):
-        raise
 
 
 if __name__ == '__main__':
