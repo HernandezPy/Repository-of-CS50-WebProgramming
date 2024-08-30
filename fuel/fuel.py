@@ -1,6 +1,5 @@
 
 def main():
-    while True:
         try:
              fraction = input("Fraction: ")
              percentage = convert(fraction)
@@ -10,6 +9,7 @@ def main():
              pass
 
 def convert(fraction):
+      while True:
         try:
             x, y = fraction.split('/')
             x = int(x)
