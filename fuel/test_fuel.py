@@ -1,29 +1,37 @@
 import pytest
-from fuel import convert, gauge
+from fuel import convert, gauge  # Adjust the import based on your filename
 
-def test_right_fractions():
-    assert gauge(convert("0/1")) == "E"
-    assert gauge(convert("1/4")) == "25%"
-    assert gauge(convert("1/2")) == "50%"
-    assert gauge(convert("3/4")) == "75%"
-    assert gauge(convert("F")) == "4/4"
+def test_convert():
+    # Test valid inputs
+    assert convert("1/2") == 50.0
+    assert convert("3/4") == 75.0
+    assert convert("1/4") == 25.0
+    assert convert("0/1") == 0.0
+    assert convert("4/4") == 100.0
 
-def test_error_zero():
+    # Test ZeroDivisionError
     with pytest.raises(ZeroDivisionError):
-        convert("0/0")
+        convert("1/0")
 
-def test_error():
+    # Test ValueError for invalid input formats
     with pytest.raises(ValueError):
-        convert, gauge("5/3")
+        convert("2")
+    with pytest.raises(ValueError):
+        convert("a/b")
+    with pytest.raises(ValueError):
+        convert("1/one")
+    with pytest.raises(ValueError):
+        convert("5/3")
+    with pytest.raises(ValueError):
+        convert("1/2/3")
+    with pytest.raises(ValueError):
+        convert("3/-2")
 
-def test_invalid_fraction():
-    with pytest.raises(ValueError):
-        convert, gauge("200/3")
-    with pytest.raises(ValueError):
-        convert, gauge("a/b")
-    with pytest.raises(ValueError):
-        convert, gauge("1/one")
-    with pytest.raises(ValueError):
-        convert, gauge("1/2/3")
-    with pytest.raises(ValueError):
-        convert, gauge("3/-2")
+def test_gauge():
+    # Test valid outputs
+    assert gauge(0.0) == "E"
+    assert gauge(1.0) == "E"
+    assert gauge(50.0) == "50%"
+    assert gauge(75.0) == "75%"
+    assert gauge(99.0) == "F"
+    assert gauge(100.0) == "F"
