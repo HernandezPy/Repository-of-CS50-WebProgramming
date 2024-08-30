@@ -10,7 +10,6 @@ def main():
              pass
 
 def convert(fraction):
-      while True:
         try:
             x, y = fraction.split('/')
             x = int(x)
