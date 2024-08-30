@@ -10,7 +10,7 @@ def main():
                pass
 
 def convert(fraction):
-        try:hhoe
+        try:
             x, y = fraction.split('/')
             x = int(x)
             y = int(y)
