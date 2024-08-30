@@ -24,7 +24,6 @@ def convert(fraction):
             raise
 
 def gauge(percentage):
-       percentage = int(percentage)
        if percentage <= 1:
           return "E"
        elif percentage >= 99:
