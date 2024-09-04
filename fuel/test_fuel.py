@@ -3,7 +3,7 @@ from fuel import convert, gauge  # Adjust the import based on your filename
 
 def test_convert():
     # Test valid inputs
-    assert convert("1/2") == "50%"
+    assert convert("1/2") == 50
     assert convert("3/4") == "75%"
     assert convert("1/4") == "25%"
     assert convert("0/1") == "E"
