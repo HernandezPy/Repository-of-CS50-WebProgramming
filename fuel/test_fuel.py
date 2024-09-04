@@ -3,11 +3,11 @@ from fuel import convert, gauge  # Adjust the import based on your filename
 
 def test_convert():
     # Test valid inputs
-    assert convert("1/2") == "50%"
-    assert convert("3/4") == "75%"
-    assert convert("1/4") == "25%"
-    assert convert("0/1") == "E"
-    assert convert("4/4") == "F"
+    assert convert("1/2") == 50.0
+    assert convert("3/4") == 75.0
+    assert convert("1/4") == 25.0
+    assert convert("0/1") == 0.0
+    assert convert("4/4") == 100.0
 
     # Test ZeroDivisionError
     with pytest.raises(ZeroDivisionError):
