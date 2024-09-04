@@ -1,5 +1,5 @@
 import pytest
-from fuel import convert, gauge  # Adjust the import based on your filename
+from fuel import convert, gauge
 
 def test_convert():
     assert convert("1/2") == 50.0
@@ -27,10 +27,10 @@ def test_all_errors():
         convert("3/-2")
 
 def test_gauge():
-    # Test valid outputs
-    assert gauge("0/1") == 0.0
-    assert gauge("1/0") == 0.0
-    assert gauge("1/2") == 50.0
-    assert gauge("3/4") == 75.0
-    assert gauge("4/4") == 100.0
+    assert gauge(0.0) == "E"
+    assert gauge(1.0) == "E"
+    assert gauge(50.0) == "50%"
+    assert gauge(75.0) == "75%"
+    assert gauge(100.0) == "F"
+
 

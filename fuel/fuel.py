@@ -1,13 +1,11 @@
 
 def main():
-        while True:
-            try:
-               fraction = input("Fraction: ")
-               percentage = convert(fraction)
-               print(gauge(percentage))
-               break
-            except (ValueError, ZeroDivisionError):
-               pass
+    try:
+        fraction = input("Fraction: ")
+        percentage = convert(fraction)
+        print(gauge(percentage))
+    except (ValueError, ZeroDivisionError):
+        pass
 
 def convert(fraction):
         try:
@@ -24,12 +22,15 @@ def convert(fraction):
             raise
 
 def gauge(percentage):
-       if percentage <= 1:
-          return "E"
-       elif percentage >= 99:
-          return "F"
-       else:
-          return f'{round(percentage)}%'
+       try:
+           if percentage <= 1:
+              return "E"
+           elif percentage >= 99:
+              return "F"
+           else:
+              return f'{round(percentage)}%'
+       except (ValueError, ZeroDivisionError):
+           raise
 
 
 if __name__ == '__main__':
