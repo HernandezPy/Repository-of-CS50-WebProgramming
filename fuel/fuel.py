@@ -18,7 +18,7 @@ def convert(fraction):
                 raise ZeroDivisionError
             if x > y:
                 raise ValueError
-            percentage = (x / y) * 100
+                percentage = ((x / y) * 100)
             return percentage
         except (ValueError, ZeroDivisionError):
             raise
