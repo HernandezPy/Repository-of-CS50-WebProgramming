@@ -28,7 +28,7 @@ def main():
         sys.exit("Not a python file")
 
     if not os.path.isfile(filename):
-        sys.exit(f"File not found.")
+        sys.exit("File does not exist")
 
     loc = count_lines_of_code(filename)
     print(loc)
