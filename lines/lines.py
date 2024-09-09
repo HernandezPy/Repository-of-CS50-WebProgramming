@@ -21,14 +21,14 @@ def count_lines_of_code(filename):
 
 def main():
     if len(sys.argv) != 2:
-        sys.exit("usage: python lines.py filename.py")
+        sys.exit("usage: py")
     filename = sys.argv[1]
 
     if not filename.endswith(".py"):
         sys.exit("filename must end with .py")
 
     if not os.path.isfile(filename):
-        sys.exit(f"File '{filename}' not found.")
+        sys.exit(f"File not found.")
 
     loc = count_lines_of_code(filename)
     print(loc)
