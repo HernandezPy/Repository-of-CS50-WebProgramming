@@ -21,11 +21,11 @@ def count_lines_of_code(filename):
 
 def main():
     if len(sys.argv) != 2:
-        sys.exit("usage: py")
+        sys.exit("Too few command-line arguments")
     filename = sys.argv[1]
 
     if not filename.endswith(".py"):
-        sys.exit("filename must end with .py")
+        sys.exit("Not a python file")
 
     if not os.path.isfile(filename):
         sys.exit(f"File not found.")
