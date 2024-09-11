@@ -1,4 +1,4 @@
-import tabulate
+from tabulate import tabulate
 import sys
 
 def pinocho_menu(filename):
