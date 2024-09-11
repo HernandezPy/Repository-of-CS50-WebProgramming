@@ -5,8 +5,10 @@ import csv
 
 def pinocho_menu(csvfile):
     try:
-        with open(csvfile, "r") as csvfile:
+        with open(csvfile, "r") as file:
             reader =csv.reader(csvfile)
+            rows = list(reader)
+            print("tabulate(rows, headers="firstrow", tablefmt="grid"))
     except FileNotFoundError:
         sys.exit("File not Found")
 
