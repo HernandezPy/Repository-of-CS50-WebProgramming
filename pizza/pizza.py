@@ -24,7 +24,7 @@ def main():
     if not os.path.isfile(filename):
         sys.exit("File does Not exist")
 
-    filename = pinocho_menu(filename)
+    pinocho_menu(filename)
 
 
 if __name__ == "__main__":
