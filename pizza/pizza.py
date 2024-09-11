@@ -4,8 +4,8 @@ import os
 
 def pinocho_menu(filename):
     try:
-        with open(filename.csv, "r") as csvfile:
-            reader = filename.DictReader(csvfile)
+        with open(filename, "r") as file:
+            reader = filename.reader(filename)
     except FileNotFoundError:
         sys.exit("File not Found")
 
