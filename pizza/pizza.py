@@ -3,10 +3,10 @@ import sys
 import os
 import csv
 
-def pinocho_menu(filename):
+def pinocho_menu(csvfile):
     try:
-        with open(filename, "r") as csvfile:
-            file =csv.reader(csvfile)
+        with open(csvfile, "r") as csvfile:
+            reader =csv.reader(csvfile)
     except FileNotFoundError:
         sys.exit("File not Found")
 
