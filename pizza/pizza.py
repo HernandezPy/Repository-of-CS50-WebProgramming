@@ -1,9 +1,18 @@
 from tabulate import tabulate
 import sys
 
-def pinocho_menu(name):
+def pinocho_menu(filename):
     try:
-        with open(name.csv, "r") as csvfile:
-            reader = csv.DictReader(csvfile)
+        with open(filename.csv, "r") as csvfile:
+            reader = filename.DictReader(csvfile)
     except FileNotFoundError:
-        sys.exit("Not a CSV file")
+        sys.exit("File not Found")
+
+
+def main():
+    if len(sys.argv) != 2:
+        sys.exit("Too few command-line arguments")
+    filename = sys.argv[1]
+
+    if not filename.endswith(".csv"):
+        sys.exit("Not a CSV file"))
