@@ -5,7 +5,7 @@ import os
 def pinocho_menu(filename):
     try:
         with open(filename, "r") as file:
-            reader = filename.reader(filename)
+            file = filename.reader(filename)
     except FileNotFoundError:
         sys.exit("File not Found")
 
