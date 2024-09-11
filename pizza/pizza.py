@@ -1,5 +1,6 @@
 from tabulate import tabulate
 import sys
+import os
 
 def pinocho_menu(filename):
     try:
