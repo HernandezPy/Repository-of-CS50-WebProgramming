@@ -15,4 +15,13 @@ def main():
     filename = sys.argv[1]
 
     if not filename.endswith(".csv"):
-        sys.exit("Not a CSV file"))
+        sys.exit("Not a CSV file")
+
+    if not os.path.isfile(filename):
+        sys.exit("File does Not exist")
+
+    filename = pinocho_menu(filename)
+
+
+if __name__ == "__main__":
+    main()
