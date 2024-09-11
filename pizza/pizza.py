@@ -1,7 +1,7 @@
 from tabulate import tabulate
 import sys
 
-def pinocho_menu(filename):
+def pinocho_menu(name):
     try:
-        with open(filename, "r") as file:
-            lines = file.
+        with open(name.csv, "r") as csvfile:
+            reader = csv.DictReader(csvfile)
