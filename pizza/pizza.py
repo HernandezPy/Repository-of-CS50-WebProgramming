@@ -6,7 +6,7 @@ import csv
 def pinocho_menu(csvfile):
     try:
         with open(csvfile, "r") as file:
-            reader =csv.reader(file)
+            reader = csv.reader(file)
             rows = list(reader)
             print(tabulate(rows, headers="firstrow", tablefmt="grid"))
     except FileNotFoundError:
