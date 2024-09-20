@@ -15,7 +15,7 @@ def main():
         sys.exit("File does Not exist")
 
 def scourgify():
-
-with open("before.csv", "r") as file:
-    for row in file:
-        print(row.rstrip())
+    try:
+        with open("before.csv",) as file:
+            for row in file:
+                print(row.rstrip())
