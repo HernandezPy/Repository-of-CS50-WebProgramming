@@ -1,3 +1,3 @@
 with open("before.csv", "r") as file:
     for row in file:
-        print(row)
+        print(row.rstrip())
