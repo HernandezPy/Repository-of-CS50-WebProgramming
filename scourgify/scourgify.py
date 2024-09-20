@@ -4,8 +4,8 @@ import os
 
 def main():
     if len(sys.argv) != 2:
-        sys.exit("Too few commnand-lines arguments)
-                 
+        sys.exit("Too few commnand-lines arguments")
+
     filename = sys.argv[1]
 
     if not filename.endswith(".csv"):
@@ -14,6 +14,7 @@ def main():
     if not os.path.isfile(filename):
         sys.exit("File does Not exist")
 
+def scourgify():
 
 with open("before.csv", "r") as file:
     for row in file:
