@@ -4,6 +4,9 @@ import sys
 def main()"
     if len(sys.argv) != 2:
         sys.exit("Too few commnand-lines arguments)
+    filename = sys.argv[1]
+
+    if not filename.endswith(".csv")
 
 
 with open("before.csv", "r") as file:
