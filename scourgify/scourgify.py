@@ -1,21 +1,5 @@
-import csv
-import sys
-import os
-
-def main():
-    if len(sys.argv) != 2:
-        sys.exit("Too few commnand-lines arguments")
-
-    filename = sys.argv[1]
-
-    if not filename.endswith(".csv"):
-        sys.exit("Not a CSV file")
-
-    if not os.path.isfile(filename):
-        sys.exit("File does Not exist")
-
 def scourgify():
-    try:
         with open("before.csv",) as file:
-            for row in file:
-                print(row.rstrip())
+            for line in file:
+                 row = line.rstrip().split(",")
+                 print(f"{row[0]}, {row[1]}")
