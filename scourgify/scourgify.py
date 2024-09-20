@@ -1,3 +1,5 @@
+import csv
+
 rows = []
 
 with open("before.csv") as file:
