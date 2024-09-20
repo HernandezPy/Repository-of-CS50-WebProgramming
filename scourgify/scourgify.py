@@ -6,7 +6,8 @@ def main()"
         sys.exit("Too few commnand-lines arguments)
     filename = sys.argv[1]
 
-    if not filename.endswith(".csv")
+    if not filename.endswith(".csv"):
+        sys.exit("Not a CSV file")
 
 
 with open("before.csv", "r") as file:
