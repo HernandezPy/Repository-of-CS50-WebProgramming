@@ -1,4 +1,4 @@
-with open("before.csv",) as file:
+with open("before.csv") as file:
     for row in file:
         print(row)
-        
+
