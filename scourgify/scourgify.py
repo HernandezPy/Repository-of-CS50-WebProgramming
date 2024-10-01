@@ -14,7 +14,7 @@ def main():
         sys.exit("Not a CSV file")
 
     if not os.path.isfile(filename)
-        sys.exit("file not found")
+        sys.exit("Could not read invalid_file.csv")
 
 
 
