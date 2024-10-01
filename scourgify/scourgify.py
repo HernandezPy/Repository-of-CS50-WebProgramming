@@ -1,24 +1,11 @@
 import csv
-import sys
-import os
-
-def after_date():
-    with open("after.csv" "w") as file:
-
 
 def main():
-    if len(sys.argv) != 3:
-        sys.exit("Too few command-line arguments")
-    else:
-        sys.exit("Too many command-line arguments")
+    with open("before.csv", "r") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            print(row)
 
-    filename = sys.argv[1]
-
-    if not filename.endswith(".csv"):
-        sys.exit("Not a CSV file")
-
-    if not os.path.isfile(filename)
-        sys.exit("Could not read invalid_file.csv")
 
 
 
