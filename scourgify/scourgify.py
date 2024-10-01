@@ -3,8 +3,10 @@ import sys
 import os
 
 def main():
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         sys.exit("Too few command-line arguments")
+    else:
+        sys.exit("Too many command-line arguments")
 
     filename = sys.argv[1]
 
