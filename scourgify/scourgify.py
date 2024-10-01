@@ -3,7 +3,8 @@ import sys
 import os
 
 def after_date():
-    with open("after.csv")
+    with open("after.csv" "w") as file:
+
 
 def main():
     if len(sys.argv) != 3:
