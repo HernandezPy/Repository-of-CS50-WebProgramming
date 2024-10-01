@@ -7,7 +7,7 @@ def main():
         writer.writeheader()
 
         for row in reader:
-            last_name, first_name = row["name"].split(",")
+            last_name, first_name = row["name"].split(", ")
             writer.writerow(
                 {
                     "FirstName": firs_name,
