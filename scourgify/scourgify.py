@@ -9,9 +9,9 @@ def main():
         for row in reader:
             writer.writerow(
                 {
-                    "FirstName": row["FirstName"],
-                    "LastName": row["LastName"],
-                    "House": row["House"]
+                    "FirstName": row("name", [1]),
+                    "LastName": row("name", [0]),
+                    "House": row("house", [0])
                 }
             )
 
