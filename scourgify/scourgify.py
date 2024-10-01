@@ -1,7 +1,8 @@
 import csv
 
 with open("before.csv", "r") as file:
-    file = file.read(fil)
+    reader = file.read()
+    print(reader.split(","))
 
 
 
