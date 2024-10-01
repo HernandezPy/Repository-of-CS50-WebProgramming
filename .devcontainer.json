@@ -39,6 +39,9 @@
         "[python]": {
           "editor.defaultFormatter": "ms-python.autopep8"
         },
+        "accessibility.signals.terminalBell": {
+          "sound": "on"
+        },
         "breadcrumbs.enabled": false,
         "C_Cpp.autocomplete": "disabled",
         "C_Cpp.clang_format_fallbackStyle": "{ AllowShortFunctionsOnASingleLine: Empty, BraceWrapping: { AfterCaseLabel: true, AfterControlStatement: true, AfterFunction: true, AfterStruct: true, BeforeElse: true, BeforeWhile: true }, BreakBeforeBraces: Custom, ColumnLimit: 100, IndentCaseLabels: true, IndentWidth: 4, SpaceAfterCStyleCast: true, TabWidth: 4 }",
@@ -154,7 +157,7 @@
           "workbench.action.toggleSidebarVisibility"
         ],
         "terminal.integrated.defaultProfile.linux": "bash",
-        "terminal.integrated.enableBell": true,
+        "terminal.integrated.enableVisualBell": true,
         "terminal.integrated.gpuAcceleration": "off",
         "terminal.integrated.persistentSessionReviveProcess": "never",
         "terminal.integrated.profiles.linux": {
@@ -221,7 +224,7 @@
     8082,
     8787
   ],
-  "image": "ghcr.io/cs50/codespace:dacf950c60c11b6af331507cd49b39dc66df9235",
+  "image": "ghcr.io/cs50/codespace:84449169e4b0671f6fb53664dd16a1851ef18561",
   "mounts": [
     {
       "source": "/var/run/docker.sock",
