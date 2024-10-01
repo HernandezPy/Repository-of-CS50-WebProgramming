@@ -16,9 +16,6 @@ def main():
     if not os.path.isfile(filename)
         sys.exit("file not found")
 
-with open("before.csv", "r") as file:
-    reader = file.read()
-    print(reader)
 
 
 
