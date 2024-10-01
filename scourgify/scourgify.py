@@ -2,6 +2,9 @@ import csv
 import sys
 import os
 
+def after_date():
+    with open("after.csv")
+
 def main():
     if len(sys.argv) != 3:
         sys.exit("Too few command-line arguments")
