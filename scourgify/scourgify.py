@@ -5,7 +5,13 @@ def main():
         reader = csv.DictReader(before)
         writer = csv.DictWriter(after, fieldnames=["FirstName", "LastName", "House"])
         writer.writeheader()
+
         for row in reader:
-            print(row)
+            writer.writerow(
+                {
+                    "FirstName"
+                }
+            )
+
 
 main()
