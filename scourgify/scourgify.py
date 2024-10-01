@@ -5,3 +5,5 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             print(row)
+
+main()
