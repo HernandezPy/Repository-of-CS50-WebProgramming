@@ -11,7 +11,7 @@ def main():
                 {
                     "FirstName": row("name", [1]),
                     "LastName": row("name", [0]),
-                    "House": row("house", [0])
+                    "House": row[house]
                 }
             )
 
