@@ -1,4 +1,6 @@
 import csv
+import sys
+import os
 
 def correct_file():
     with open("before.csv", "r") as before, open("after.csv", "w", newline='') as after:
@@ -18,7 +20,7 @@ def correct_file():
 
 
 def main():
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 2:
         sys.exit("Too few command-line arguments")
     else:
         sys.exit("Too many commnad-line arguments")
