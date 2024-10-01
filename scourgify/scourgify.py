@@ -10,7 +10,7 @@ def main():
             last_name, first_name = row["name"].split(", ")
             writer.writerow(
                 {
-                    "FirstName": firts_name,
+                    "FirstName": first_name,
                     "LastName": last_name,
                     "House": row["house"]
                 }
