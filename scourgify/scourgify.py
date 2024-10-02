@@ -1,7 +1,8 @@
 import csv
 
 with open("before.csv") as file:
-    reader = read.DictReader(file)
-    print(reader)
+    reader = csv.DictReader(file)
+    for row in reader:
+        print(reader)
 
 
