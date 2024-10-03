@@ -10,4 +10,4 @@ with open("before.csv", "w") as file:
     for row in fieldnames:
         last_name, first_name = row["name"].split(", ")
         writer.writerow({"first": first_name, "last": last_name, "house": row["house"]})
-
+        print(fieldnames)
