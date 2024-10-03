@@ -1,8 +1,8 @@
 import csv
 
 with open("before.csv") as file:
-    reader = csv.DictReader(file)
-    for row in reader:
-        print(row)
+    reader = csv.reader(file)
+    for name, house in reader:
+        before.append
 
 
