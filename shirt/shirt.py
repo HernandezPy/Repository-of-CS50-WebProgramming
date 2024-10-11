@@ -10,5 +10,8 @@ elif len(sys.orgv) > 3:
 input_file = sys.argv[1]
 output_file = sys.argv[2]
 
-try:
-    
+def main():
+    with Image.open("shirt.png") as img:
+        
+
+
