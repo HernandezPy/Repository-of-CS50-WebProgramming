@@ -11,7 +11,8 @@ input_file = sys.argv[1]
 output_file = sys.argv[2]
 
 def main():
-    with Image.open("shirt.png") as img:
-        
+    with Image.open("input_file") as img:
+        img.save("after")
+
 
 
