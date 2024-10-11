@@ -2,7 +2,7 @@ import csv, sys, os
 
 if len(sys.orgv) < 3:
     sys.exit("Too few command-line arguments")
-if len(sys.orgv) > 3:
+elif len(sys.orgv) > 3:
     sys.exit("Too many command-line arguments")
 
 input_file = sys.argv[1]
