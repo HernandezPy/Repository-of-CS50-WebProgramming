@@ -15,7 +15,7 @@ input_ext = os.path.splitext(input_path)[1].lower()
 imput_ext = os.path.splitext(output_path)[2].lower()
 
 if input_ext not in valid_extensions or output_ext not in valid_extensions:
-    sys.exit(")
+    sys.exit("Invalid output")
 
 def main():
     shirt = Image.open("input_file") as img:
