@@ -7,8 +7,15 @@ if len(sys.orgv) < 3:
 elif len(sys.orgv) > 3:
     sys.exit("Too many command-line arguments")
 
-input_file = sys.argv[1]
-output_file = sys.argv[2]
+input_path = sys.argv[1]
+output_path = sys.argv[2]
+
+valid_extensions = [".jpg", ".jpeg", ".png"]
+input_ext = os.path.splitext(input_path)[1].lower()
+imput_ext = os.path.splitext(output_path)[2].lower()
+
+if input_ext not in valid_extensions or output_ext not in valid_extensions:
+    sys.exit(")
 
 def main():
     shirt = Image.open("input_file") as img:
