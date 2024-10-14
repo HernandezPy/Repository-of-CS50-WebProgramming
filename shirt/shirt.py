@@ -35,8 +35,7 @@ def main():
 
     except FileNotFoundError:
         sys.exit("File not found")
-    except Exception as e:
-        sys.exit(f"Error: {e})
+
 
 if __name__ == "__main__":
     main()
