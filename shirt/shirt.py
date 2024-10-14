@@ -3,9 +3,9 @@ from PIL import Image
 
 
 def main():
-    if len(sys.orgv) < 3:
+    if len(sys.argv) < 3:
         sys.exit("Too few command-line arguments")
-    elif len(sys.orgv) > 3:
+    elif len(sys.argv) > 3:
         sys.exit("Too many command-line arguments")
 
     input_path = sys.argv[1]
