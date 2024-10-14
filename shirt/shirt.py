@@ -33,7 +33,7 @@ def main():
         resized_img.paste(shirt_img, shirt_img)
         resized_img.save(output_path)
 
-    except FileNotFound:
+    except FileNotFoundError:
         sys.exit("File not found")
     except Exception as e:
         sys.exit(f"Error: {e})
