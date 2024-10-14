@@ -25,18 +25,18 @@ def main():
         sys.exit("Input does not exist")
 
 
-try:
-    input_img = Image.open(input_path)
-    shirt_img = Image.open("shirt.png")
+    try:
+        input_img = Image.open(input_path)
+        shirt_img = Image.open("shirt.png")
 
-    resized_img = ImageOps.fit(input_img, size)
-    resized_img.paste(shirt_img, shirt_img)
-    resized_img.save(output_path)
+        resized_img = ImageOps.fit(input_img, size)
+        resized_img.paste(shirt_img, shirt_img)
+        resized_img.save(output_path)
 
-except FileNotFound:
-    sys.exit("File not found")
-except Exception as e:
-    sys.exit(f"Error: {e})
+    except FileNotFound:
+        sys.exit("File not found")
+    except Exception as e:
+        sys.exit(f"Error: {e})
 
 if __name__ == "__main__":
     main()
