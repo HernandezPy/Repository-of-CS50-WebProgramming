@@ -2,10 +2,11 @@ import sys, os
 from PIL import Image
 
 
-if len(sys.orgv) < 3:
-    sys.exit("Too few command-line arguments")
-elif len(sys.orgv) > 3:
-    sys.exit("Too many command-line arguments")
+def main():
+    if len(sys.orgv) < 3:
+        sys.exit("Too few command-line arguments")
+    elif len(sys.orgv) > 3:
+        sys.exit("Too many command-line arguments")
 
 input_path = sys.argv[1]
 output_path = sys.argv[2]
@@ -21,9 +22,8 @@ if input_ext != output_ext:
 if not os.path.isfile(input_path):
     sys.exit("Input does not exist")
 
-def main():
-    shirt = Image.open("input_file") as img:
-        img.save("after")
+
+
 
 
 
