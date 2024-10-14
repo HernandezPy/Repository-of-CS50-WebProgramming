@@ -1,5 +1,5 @@
 import sys, os
-from PIL import Image
+from PIL import Image, ImageOps
 
 
 def main():
