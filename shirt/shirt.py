@@ -13,7 +13,7 @@ def main():
 
     valid_extensions = [".jpg", ".jpeg", ".png"]
     input_ext = os.path.splitext(input_path)[1].lower()
-    output_ext = os.path.splitext(output_path)[2].lower()
+    output_ext = os.path.splitext(output_path)[1].lower()
 
     if input_ext not in valid_extensions or output_ext not in valid_extensions:
         sys.exit("Invalid output")
