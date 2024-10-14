@@ -29,6 +29,7 @@ def main():
         input_img = Image.open(input_path)
         shirt_img = Image.open("shirt.png")
 
+        size = shirt_img.size
         resized_img = ImageOps.fit(input_img, size)
         resized_img.paste(shirt_img, shirt_img)
         resized_img.save(output_path)
