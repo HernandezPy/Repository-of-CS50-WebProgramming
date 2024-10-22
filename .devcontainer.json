@@ -93,6 +93,7 @@
             }
           }
         },
+        "editor.stickyScroll.enabled": false,
         "editor.suggestOnTriggerCharacters": false,
         "explorer.autoOpenDroppedFile": false,
         "explorer.compactFolders": false,
@@ -132,7 +133,7 @@
         "html.suggest.html5": false,
         "java.configuration.runtimes": [
           {
-            "name": "JavaSE-22",
+            "name": "JavaSE-23",
             "path": "/opt/jdk",
             "default": true
           }
@@ -145,6 +146,7 @@
         "javascript.validate.enable": false,
         "Prettier-SQL.keywordCase": "upper",
         "problems.decorations.enabled": false,
+        "problems.visibility": false,
         "python.terminal.executeInFileDir": true,
         "remote.autoForwardPorts": true,
         "remote.autoForwardPortsFallback": 0,
@@ -207,6 +209,7 @@
           "*.wav": "vscode.audioPreview"
         },
         "workbench.iconTheme": "vs-minimal",
+        "workbench.layoutControl.enabled": false,
         "workbench.preferredDarkColorTheme": "GitHub Dark Default",
         "workbench.preferredLightColorTheme": "GitHub Light Default",
         "workbench.startupEditor": "none",
@@ -224,7 +227,7 @@
     8082,
     8787
   ],
-  "image": "ghcr.io/cs50/codespace:6d4dd1e11c8bbe09f3ab58013d0a79dc1815f70c",
+  "image": "ghcr.io/cs50/codespace:73beb92706899236cdee7c67ebb6b7c2da527f1c",
   "mounts": [
     {
       "source": "/var/run/docker.sock",
