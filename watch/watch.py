@@ -6,7 +6,6 @@ def parse(html):
     if match:
         video_id = match.group("video_id")
         return f"https://youtu.be/{video_id}"
-    return None
 
 
 def main():
@@ -16,7 +15,7 @@ def main():
     if result:
         print(result)
     else:
-        print("No YouTube video found.")
+        return None
 
 
 if __name__ == "__main__":
