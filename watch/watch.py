@@ -3,9 +3,9 @@ import re
 
 
 def parse(html):
-    match = re.search(r'src="https?://(?:www\.)?youtube\.com/embed/([a-zA-Z0-9_-]+)[^"]*"', html)
+    match = re.search(r'src="https?://(?:www\.)?youtube\.com/embed/(?P<video_id>[a-zA-Z0-9_-]+)[^"]*"', html)
     if match:
-        video_id = match.group(1)
+        video_id = match.group("video_id")
         return f"https://youtu.be/{video_id}"
     return None
 
