@@ -1,4 +1,3 @@
-import sys
 import re
 
 
@@ -11,10 +10,7 @@ def parse(html):
 
 
 def main():
-    if len(sys.argv) == 2:
-        html = sys.argv[1]
-    else:
-        html = input("HTML: ")
+    html = input("HTML: ")
 
     result = parse(html)
     if result:
