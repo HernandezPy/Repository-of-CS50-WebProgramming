@@ -2,8 +2,8 @@ import re
 
 
 def convert(s):
-    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM) to (\d{1,2})(?::(\d{2}))? (AM|PM)$", re.IGNORECASE
-    match = re.match(pattern, s)
+    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM) to (\d{1,2})(?::(\d{2}))? (AM|PM)$"
+    match = re.match(pattern, s, re.IGNORECASE)
 
     if not match:
         raise ValueError("ValueError")
@@ -36,6 +36,6 @@ if __name__ == "__main__":
     try:
         print("Enter working hours (e.g., '9:00 AM to 5:00 PM'")
         time = input("HOUR: ")
-        print(convert(s))
+        print(convert(time))
     except ValueError as e:
         print(e)
