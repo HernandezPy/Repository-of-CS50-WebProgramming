@@ -29,13 +29,13 @@ def convert(s):
 
     start_24 = to_24_hour(start_hour, start_minute, start_period)
     end_24 = to_24_hour(end_hour, end_minute, end_period)
-    return f"{start_24} to {end_24}"
+    return f"{start_24} to {end_24}".
 
 
 if __name__ == "__main__":
     try:
         print("Enter working hours (e.g., '9:00 AM to 5:00 PM'")
-        time = input("HOUR: ").lower()
+        time = input("HOUR: ")
         print(convert(time))
     except ValueError as e:
         print(e)
