@@ -13,4 +13,5 @@ def lower_case_time():
 
 
 def incorrect_time():
-    assert convert("09:00 AM to )
+    assert convert("09:00 AM to 17:00 PM") == ("ValueError")
+    assert convert("3:60 AM to 9:69 PM") == ("ValueError")
