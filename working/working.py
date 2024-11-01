@@ -2,7 +2,7 @@ import re
 
 
 def convert(s):
-    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM) to (\d{1,2})(?::(\d{2}))? (AM|PM)$"
+    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM) to (\d{1,2})(?::(\d{2}))? (AM|PM)$", IGNORE=APPARECASE
     match = re.match(pattern, s)
 
     if not match:
@@ -25,11 +25,11 @@ def convert(s):
             hour += 12
         elif period == "AM" and hour == 12:
             hour = 0
-        return f"{hour:02}:{minute:02}".lower()
+        return f"{hour:02}:{minute:02}"
 
     start_24 = to_24_hour(start_hour, start_minute, start_period)
     end_24 = to_24_hour(end_hour, end_minute, end_period)
-    return f"{start_24} to {end_24}".lower()
+    return f"{start_24} to {end_24}"
 
 
 if __name__ == "__main__":
