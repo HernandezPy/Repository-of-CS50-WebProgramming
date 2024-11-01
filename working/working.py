@@ -25,11 +25,11 @@ def convert(s):
             hour += 12
         elif period == "AM" and hour == 12:
             hour = 0
-        return f"{hour:02}:{minute:02}"
+        return f"{hour:02}:{minute:02}".lower()
 
     start_24 = to_24_hour(start_hour, start_minute, start_period)
     end_24 = to_24_hour(end_hour, end_minute, end_period)
-    return f"{start_24} to {end_24}".
+    return f"{start_24} to {end_24}".lower()
 
 
 if __name__ == "__main__":
