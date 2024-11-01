@@ -2,7 +2,7 @@ import re
 
 
 def convert(s):
-    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM) to (\d{1,2})(?::(\d{2}))? (AM|PM)$", IGNORE=APPARECASE
+    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM) to (\d{1,2})(?::(\d{2}))? (AM|PM)$", IGNORECASE
     match = re.match(pattern, s)
 
     if not match:
