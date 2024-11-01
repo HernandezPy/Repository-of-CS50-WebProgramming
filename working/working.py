@@ -35,7 +35,7 @@ def convert(s):
 if __name__ == "__main__":
     try:
         print("Enter working hours (e.g., '9:00 AM to 5:00 PM'")
-        time = input("HOUR: ")
+        time = input("HOUR: ").lower()
         print(convert(time))
     except ValueError as e:
         print(e)
