@@ -36,6 +36,6 @@ if __name__ == "__main__":
     try:
         print("Enter working hours (e.g., '9:00 AM to 5:00 PM'")
         time = input("HOUR: ")
-        print(convert(time))
+        print(convert(s))
     except ValueError as e:
         print(e)
