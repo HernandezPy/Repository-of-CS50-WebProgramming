@@ -34,9 +34,9 @@ def convert(s):
 
 def validate_input(s):
     if "-" in s:
-        raise ValueError("Invalid time format")
+        raise ValueError("ValueError")
     if re.match(r"^\d{2}:\d{2} to \d{2}:\d{2}$", s):
-        raise ValueError("Invalid time format")
+        raise ValueError("ValueError")
 
     return s
 
