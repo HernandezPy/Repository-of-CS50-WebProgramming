@@ -35,7 +35,7 @@ def convert(s):
 def validate_input(s):
     if "-" in s:
         raise ValueError("Invalid time format")
-    if re.match(r"^\d{2}:\d{2} to \d{2}:\d{2}$, s):
+    if re.match(r"^\d{2}:\d{2} to \d{2}:\d{2}$", s):
         raise ValueError("Invalid time format")
 
     return s
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     try:
         print("Enter working hours (e.g., '9:00 AM to 5:00 PM'")
         time = input("HOUR: ")
-        
+
         validate_input(time)
 
         print(convert(time))
