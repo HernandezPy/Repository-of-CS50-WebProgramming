@@ -50,7 +50,7 @@ def convert(s):
     return f"{start_24} to {end_24}"
 
 def validate_input(s):
-    if '-' in s:
+    if re.match(r"^\d{2}:\d{2} - \d{2}:\d{2}$", s):
         raise ValueError("ValueError")
     if re.match(r"^\d{2}:\d{2} to \d{2}:\d{2}$", s):
         raise ValueError("ValueError")
