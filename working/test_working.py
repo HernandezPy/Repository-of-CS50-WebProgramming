@@ -10,7 +10,8 @@ def test_correct_time():
 
 
 def test_lower_case_time():
-    assert convert("9:00 am to 5:00 pm") == "09:00 to 17:00"
+    with pytest.raises(ValueError):
+        convert("9:00 am to 5:00 pm")
 
 
 def test_incorrect_time():
