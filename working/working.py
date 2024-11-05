@@ -2,11 +2,12 @@ import re
 
 
 def convert(s):
-    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM) to (\d{1,2})(?::(\d{2}))? (AM|PM)$"
+    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM) (?P<puente>to) (\d{1,2})(?::(\d{2}))? (AM|PM)$"
     match = re.match(pattern, s)
 
-    if not match:
-        raise ValueError("ValueError")
+    for d in pattern:
+        if not match (match.group("puente")):
+            raise ValueError("ValueError")
 
     start_hour, start_minute, start_period, end_hour, end_minute, end_period = match.groups()
 
