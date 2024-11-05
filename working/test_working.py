@@ -22,3 +22,6 @@ def incorrect_time():
 def omits_to():
     assert convert("9:00 AM - 7:00 PM") == ("ValueError")
     assert convert("8:00 _ 17:00") == ("ValueError")
+
+def out_of_range():
+    assert convert("9:00 AM to 5:00 PM to 3:00 AM") == ("ValueError")
