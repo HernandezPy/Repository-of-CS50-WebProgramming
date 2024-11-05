@@ -32,9 +32,9 @@ def convert(s):
         raise ValueError("ValueError")
     if not (0 <= end_minute < 60):
         raise ValueError("ValueError")
-    if not (1 <= start_hour <= 12) or not (0 <= start_minute < 60):
+    if not (1 <= start_hour <= 12) or not (0 <= start_minute < 59):
         raise ValueError("ValueError")
-    if not (1 <= end_hour <= 12) or not (0 <= end_minute < 60):
+    if not (1 <= end_hour <= 12) or not (0 <= end_minute < 59):
         raise ValueError("ValueError")
 
     def to_24_hour(hour, minute, period):
