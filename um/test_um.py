@@ -1,10 +1,14 @@
+import pytest
+from um import count
+
+
 def test_count_basic():
     assert count("hello, um, world.") == 1
 
 def test_count_multiple():
     assert count("um um um") == 3
 
-def test_count_mixed_case()
+def test_count_mixed_case():
     assert count("Um, uM, UM") == 3
 
 def test_count_no_um():
