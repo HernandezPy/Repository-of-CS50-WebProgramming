@@ -2,7 +2,7 @@ import re
 
 
 def convert(s):
-    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM) (?P<puente>to) (\d{1,2})(?::(\d{2}))? (AM|PM)$"
+    pattern = r"^(\d{1,2})(?::(\d{2}))? (AM|PM) to (\d{1,2})(?::(\d{2}))? (AM|PM)$"
     match = re.search(pattern, s)
 
     if not match:
