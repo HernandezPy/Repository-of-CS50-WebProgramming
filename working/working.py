@@ -54,5 +54,5 @@ if __name__ == "__main__":
 
         print(convert(time))
 
-    except ValueError as e:
-        print(e)
+    except ValueError:
+        print("ValueError")
