@@ -2,7 +2,7 @@ import validators
 
 
 def main():
-    email = input("Enter your Email: ").strip()
+    email = input("Enter your Email: ")
     print(valid_email,(email))
 
 
