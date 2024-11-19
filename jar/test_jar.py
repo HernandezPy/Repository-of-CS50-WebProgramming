@@ -32,7 +32,7 @@ def test_withdraw():
     jar.withdraw(3)
     assert jar.size == 3
     jar.withdraw(1)
-    assert jar.withdraw == 2
+    assert jar.size == 2
 
 
 
