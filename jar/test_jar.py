@@ -31,6 +31,7 @@ def test_withdraw():
     jar.deposit(6)
     jar.withdraw(5)
     assert jar.size == 1
+    jar = Jar()
     jar.deposit(6)
     jar.withdraw(1)
     assert jar.withdraw == 5
