@@ -29,12 +29,10 @@ def test_deposit():
 def test_withdraw():
     jar = Jar()
     jar.deposit(6)
-    jar.withdraw(5)
-    assert jar.size == 1
-    jar = Jar()
-    jar.deposit(6)
+    jar.withdraw(3)
+    assert jar.size == 3
     jar.withdraw(1)
-    assert jar.withdraw == 5
+    assert jar.withdraw == 2
 
 
 
