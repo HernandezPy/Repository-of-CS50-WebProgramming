@@ -6,7 +6,7 @@ def test_init():
     jar = Jar()
     assert jar.capacity == 12
     jar2 = Jar(3)
-    assert jar.capacity == 3
+    assert jar2.capacity == 3
 
 
 def test_str():
@@ -28,8 +28,10 @@ def test_deposit():
 
 def test_withdraw():
     jar = Jar()
+    jar.deposit(6)
     jar.withdraw(5)
-    assert jar.size == 7
+    assert jar.size == 1
+    jar.deposit(12)
     jar.withdraw(1)
     assert jar.withdraw == 11
 
