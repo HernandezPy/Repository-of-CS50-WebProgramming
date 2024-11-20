@@ -6,10 +6,10 @@ class PDF(FPDF):
         self._pdf = FPDF()
         self._pdf.add_page()
         self._pdf.set_font("Arial", size=40)
-        self._pdf.cell(50, 60, "CS50 Shirtificate", new_x="LMARGIN", align="C")
+        self._pdf.cell(0, 60, "CS50 Shirtificate", new_x="LMARGIN", align="C")
         self._pdf.image("shirtificate.png", w=self._pdf.eph)
         self._pdf.set_font(30)
-        self._pdf.set.text_color("blue")
+        self._pdf.set_text_color("blue")
         self._pdf.text(x=47.5, y=140, txt=f"{name} took CS50")
 
     def save(self, name):
