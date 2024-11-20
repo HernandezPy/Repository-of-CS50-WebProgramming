@@ -1,20 +1,21 @@
 from fpdf import FPDF
 
 
-def main(FPDF):
-    pdf = FPDF()
-    name_on_tshirt = input("Name: ")
+class PDF(FPDF):
+    def __init__(self, name):
+        self._pdf = FPDF()
+        self._pdf.add_page()
+        self._pdf.set_font("Arial", size=40)
+        self._pdf.cell(50, 60, "CS50 Shirtificate", new_x="LMARGIN", align="C")
+        self._pdf.image("shirtificate.png", w=self._pdf.eph)
+        self._pdf.set_font(30)
+        self._pdf.set.text_color("blue")
+        self._pdf.text(x=47.5, y=140, txt=f"{name} took CS50")
+
+    def save(self, name):
+        self._pdf.save
 
 
-def pdf_tshirt():
-    pdf = FPDF(orientation="portrait", format="A4", width=210, height=297)
-    pdf.add_page()
-    pdf.image("shirtificate.png", alt_text="name_on_tshirt")
-    pdf.set_font("helvetica", size=12)
-    pdf.text(text="CS50 Shirtificate")
-    pdf.save("shirtificate.pdf")
-    pdf.output(name_on_tshirt, pdf.save)
-
-
-if __name__ == '__main__':
-    main()
+name = input("Nane: ")
+pdf = PDF(name)
+pdf.save("shirtificate.pdf")
