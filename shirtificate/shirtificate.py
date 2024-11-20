@@ -1,7 +1,8 @@
 from fpdf import FPDF
 
 
-def main():
+def main(FPDF):
+    pdf = FPDF()
     name_on_tshirt = input("Name: ")
 
 
