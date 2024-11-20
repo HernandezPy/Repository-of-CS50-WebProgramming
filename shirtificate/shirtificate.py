@@ -15,6 +15,6 @@ class PDF(FPDF):
     def save(self, name):
         self._pdf.output(name)
 
-name = input("Nane: ")
+name = input("Name: ")
 pdf = PDF(name)
 pdf.save("shirtificate.pdf")
