@@ -12,6 +12,7 @@ def pdf_tshirt():
     pdf.set_font("helvetica", size=12)
     pdf.text(text="CS50 Shirtificate")
     pdf.save("shirtificate.pdf")
+    pdf.output()
 
 
 if __name__ == '__main__':
