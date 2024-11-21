@@ -2,7 +2,8 @@
 def convert(time):
 
     hours, minutes = time.split(":")
-    return hours + minutes / 60
+    minute = float(minutes) / 60
+    return float(hours) + minute
 
 def main():
     time = input('What time is it? ').strip()
