@@ -9,11 +9,11 @@ def main():
     time = input('What time is it? ').strip()
     hours = convert(time)
 
-    if 7 <= 8:
+    if hours >= 7 and hour <= 8:
        print('breakfast time')
-    elif 8 >= 12 <= 13:
+    elif hours >= 12 and hours <= 13:
        print('lunch time')
-    elif 18 <= 19:
+    elif hours >= 18 and hours <= 19:
        print('dinner time')
     else:
        pass
