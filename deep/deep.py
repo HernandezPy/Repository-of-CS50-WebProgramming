@@ -1,14 +1,10 @@
 def check_answer(answer):
     normalized_answer = answer.lower().strip()
     valid_answers = ["42", "forty-two", "forty two"]
-    for normalized_answer in valid_answers:
-        if normalized_answer in valid_answers:
-            return "Yes"
-        else:
-            return "No"
-    for normalized_answer in valid_answers:
-          if not normalized_answer in valid_answers:
-              return "No"
+    if normalized_answer in valid_answers:
+         return "Yes"
+    if normalized_answer not in valid_answers:
+         return "No"
 
 
 def main():
