@@ -4,8 +4,11 @@ def check_answer(answer):
     for normalized_answer in valid_answers:
         if normalized_answer in valid_answers:
             return "Yes"
-    if not valid_answers:
+        else:
             return "No"
+    for normalized_answer in valid_answers:
+          if not normalized_answer in valid_answers:
+              return "No"
 
 
 def main():
