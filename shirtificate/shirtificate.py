@@ -3,7 +3,7 @@ from fpdf import FPDF
 
 class PDF(FPDF):
     def __init__(self, name):
-        self._pdf = FPDF(orientation="portrait", format="A4")
+        self._pdf = FPDF()
         self._pdf.add_page()
         self._pdf.set_font("Arial", "B", size=50)
         self._pdf.cell(0, 60, "CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", align="C")
