@@ -4,7 +4,7 @@ def check_answer(answer):
     for normalized_answer in valid_answers:
         if normalized_answer in valid_answers:
             return "Yes"
-        else:
+    if not valid_answers:
             return "No"
 
 
