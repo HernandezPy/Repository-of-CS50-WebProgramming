@@ -2,7 +2,7 @@
 def convert(time):
 
     hours, minutes = time.split(":")
-    return hours + minutes / 60
+    return hours + minutes * 60
 
 def main():
     time = input('What time is it? ').strip()
