@@ -6,7 +6,7 @@ class PDF(FPDF):
         self._pdf = FPDF()
         self._pdf.add_page()
         self._pdf.set_font("Arial", "B", size=50)
-        self._pdf.cell(0, 60, "CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", align="C")
+        self._pdf.cell(60, 10, "CS50 Shirtificate", new_x="LMARGIN", new_y="NEXT", align="C")
         self._pdf.image("shirtificate.png", w=self._pdf.epw)
         self._pdf.set_font_size(23)
         self._pdf.set_text_color(255, 255, 255)
