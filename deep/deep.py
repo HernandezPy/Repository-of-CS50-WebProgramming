@@ -1,18 +1,18 @@
-def main(answer):
+def check_answer(answer):
     normalized_answer = answer.lower().strip()
-    normal_answer = ['42', 'forty-two', 'forty two']
-    if normalized_answer in normal_answer:
-      return 'yes'
-    else:
-       return 'no'
+    valid_answers = ["42", "forty-two", "forty two"]
+    for normalized_answer in valid_answers:
+        if normalized_answer in valid_answers:
+            return "Yes"
+        else:
+            return "No"
 
 
-def check_question():
-   question = input("What is the Great Question of life, the Universe, and everythin? ")
-   result = main(question)
-   print(result)
+def main():
+    user_answer = input("What is the Answer to the Great Question of Life, the Universe, and Everything? ")
+    result = check_answer(user_answer)
+    print(result)
 
 
-if __name__ == "__main_":
-   main()
-
+if __name__ == "__main__":
+    main()
