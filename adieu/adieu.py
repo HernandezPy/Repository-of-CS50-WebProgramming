@@ -11,10 +11,6 @@ def main():
     except EOFError:
         pass
 
-    farewell_message = generate_farewell(names)
-    print(farewell_message)
-
-
 def generate_farewell(names):
     p = inflect.engine()
     if len(names) == 1:
