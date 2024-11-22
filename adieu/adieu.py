@@ -3,7 +3,6 @@ import readline
 import inflect
 
 def main():
-    print("Enter names (Ctrl-D to end):")
     names = []
     try:
         while True:
