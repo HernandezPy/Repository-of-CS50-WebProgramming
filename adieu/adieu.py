@@ -6,7 +6,7 @@ def main():
     names = []
     try:
         while True:
-            name = input("Name: ")
+            name = input()
             names.append(name)
     except EOFError:
         pass
