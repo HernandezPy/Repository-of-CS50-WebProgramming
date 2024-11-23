@@ -31,4 +31,11 @@ def test_all_errors():
         convert("3/-2")
 
 
+def gauge():
+    assert gauge(75) == "75%"
+    assert gauge(25) == "25%"
+    assert gauge(99) == "F"
+    assert gauge(1) == "E"
+
+
 
