@@ -6,6 +6,7 @@ def main():
 
 
 def convert(fraction):
+    while True:
         try:
             x, y = fraction.split('/')
             x, y = int(x, y)
@@ -15,7 +16,7 @@ def convert(fraction):
                 raise ValueError
             percentage = x / y * 100
             return percentage
-        except (ValueError, ZeroDivisionError):
+        except (ValueError, ZeroDivisionError, TypeError):
             raise
 
 def gauge(percentage):
