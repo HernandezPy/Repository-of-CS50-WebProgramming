@@ -2,11 +2,11 @@ import pytest
 from fuel import convert, gauge
 
 def test_convert():
-    assert convert("1/2") == 50.0 and gauge(50) == "50%"
-    assert convert("3/4") == 75.0 and gauge(75) == "75%"
-    assert convert("1/4") == 25.0 and gauge(25) == "25%"
-    assert convert("99/100") == 99.0 and gauge(99) == "F"
-    assert convert("1/100") == 1.0 and gauge(1) == "E"
+    assert convert("1/2") == 50.0
+    assert convert("3/4") == 75.0
+    assert convert("1/4") == 25.0
+    assert convert("99/100") == 99.0
+    assert convert("1/100") == 1.0
 
 def test_zero_division():
     with pytest.raises(ZeroDivisionError):
@@ -32,6 +32,7 @@ def test_all_errors():
 
 
 def gauge():
+    assert gauge(50) == "50%"
     assert gauge(75) == "75%"
     assert gauge(25) == "25%"
     assert gauge(99) == "F"
