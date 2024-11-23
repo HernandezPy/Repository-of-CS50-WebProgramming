@@ -12,6 +12,10 @@ def test_zero_division():
     with pytest.raises(ZeroDivisionError):
         convert("1/0")
 
+def test_value():
+    with pytest.raises(ValueError):
+        convert("dock/1")
+
 def test_all_errors():
     with pytest.raises(ValueError):
         convert("2")
