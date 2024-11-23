@@ -14,7 +14,7 @@ def test_zero_division():
 
 def test_value():
     with pytest.raises(ValueError):
-        convert("dock/1")
+        convert("cat/dog")
 
 def test_all_errors():
     with pytest.raises(ValueError):
