@@ -10,7 +10,7 @@ def test_convert():
 
 def test_zero_division():
     with pytest.raises(ZeroDivisionError):
-        convert("0/0")
+        convert("1/0")
 
 def test_all_errors():
     with pytest.raises(ValueError):
