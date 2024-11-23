@@ -9,7 +9,8 @@ def convert(fraction):
     while True:
         try:
             x, y = fraction.split('/')
-            x, y = int(x, y)
+            x = int(x)
+            y = int(y)
             if y == 0:
                 raise ZeroDivisionError
             if x > y:
