@@ -2,7 +2,7 @@ import pytest
 from fuel import convert, gauge
 
 def test_convert():
-    assert convert("1/2") == 50.0
+    assert convert("1/2") == 50
     assert convert("3/4") == 75.0
     assert convert("1/4") == 25.0
     assert convert("99/100") == 99.0
