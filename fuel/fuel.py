@@ -1,11 +1,9 @@
 
 def main():
-    try:
-        fraction = input("Fraction: ")
-        percentage = convert(fraction)
-        print(gauge(percentage))
-    except (ValueError, ZeroDivisionError):
-        pass
+    fraction = input("Fraction: ")
+    percentage = convert(fraction)
+    print(gauge(percentage))
+
 
 def convert(fraction):
         try:
