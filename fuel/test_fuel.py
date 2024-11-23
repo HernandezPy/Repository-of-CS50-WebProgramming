@@ -5,8 +5,8 @@ def test_convert():
     assert convert("1/2") == 50.0 and gauge(50) == "50%"
     assert convert("3/4") == 75.0 and gauge(75) == "75%"
     assert convert("1/4") == 25.0 and gauge(25) == "25%"
-    assert convert("4/4") == 100.0 and gauge(100) == "F"
-    assert convert("0/1") == 0.0 and gauge(0) == "E"
+    assert convert("99/100") == 99.0 and gauge(99) == "F"
+    assert convert("1/100") == 1.0 and gauge(1) == "E"
 
 def test_zero_division():
     with pytest.raises(ZeroDivisionError):
