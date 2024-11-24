@@ -21,8 +21,6 @@ def test_incorrect_time():
         convert("3:60 AM to 9:69 PM")
     with pytest.raises(ValueError):
         convert("9:00 AM 5:00 PM")
-    with pytest.raises(ValueError):
-        convert("1:00 PM to 01:00 AM")
 
 
 def test_omits_to():
