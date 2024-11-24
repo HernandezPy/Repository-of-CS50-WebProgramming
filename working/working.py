@@ -1,16 +1,13 @@
 import re
 
 def main():
-    try:
         print("Enter working hours (e.g., '9:00 AM to 5:00 PM')")
         time = input("HOUR: ")
 
         validate_input(time)
 
         print(convert(time))
-
-    except ValueError:
-        print("ValueError")
+        
 
 def convert(s):
     pattern = r"^(\d{1,2})(?::(\d{1,2}))? (AM|PM) to (\d{1,2})(?::(\d{1,2}))? (AM|PM)$"
