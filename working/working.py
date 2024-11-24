@@ -28,7 +28,7 @@ def convert(s):
     end_minute = int(end_minute) if end_minute else 0
 
 
-    if not (0 <= start_minute < 60):
+    if not (0 <= start_minute <= 60):
         raise ValueError("ValueError")
     if not (0 <= end_minute < 60):
         raise ValueError("ValueError")
