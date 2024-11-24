@@ -9,7 +9,7 @@ def main():
 
         print(convert(time))
 
-    raise ValueError("ValueError")
+    except ValueError:("ValueError")
 
 def convert(s):
     pattern = r"^(\d{1,2})(?::(\d{1,2}))? (AM|PM) to (\d{1,2})(?::(\d{1,2}))? (AM|PM)$"
