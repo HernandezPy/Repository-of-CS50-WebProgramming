@@ -11,10 +11,8 @@ class PDF(FPDF):
         self._pdf.set_font_size(23)
         self._pdf.set_text_color(255, 255, 255)
         self._pdf.text(x=47.5, y=140, txt=f"{name} took CS50")
-
-    def save(self, name):
-        self._pdf.output(name)
+        self._pdf.output("shirtificate.pdf")
 
 name = input("Name: ")
 pdf = PDF(name)
-pdf.save("shirtificate.pdf")
+
