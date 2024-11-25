@@ -10,7 +10,11 @@ class PDF(FPDF):
         self._pdf.image("shirtificate.png", x=15, y=60, w=180)
         self._pdf.set_font("Arial", "B", 25)
         self._pdf.set_text_color(255, 255, 255)
-        self._pdf.text(x=55, y=130, txt=f"{name} took CS50")
+        self._pdf.text = f"{self.name} took CS50"
+        self._pdf.text_width = self.get_string_width(text)
+        self._pdf.page_width = self.w
+        self._pdf.text(page_width - text_width) / 2
+        self._pdf.text(x=x_position, y=140, txt= text)
         self._pdf.output("shirtificate.pdf")
 
 name = input("Name: ")
