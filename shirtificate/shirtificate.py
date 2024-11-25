@@ -10,7 +10,7 @@ class PDF(FPDF):
         self._pdf.image("shirtificate.png", w=self._pdf.epw)
         self._pdf.set_font_size(23)
         self._pdf.set_text_color(255, 255, 255)
-        self._pdf.text(x=47.5, y=140, txt=f"{name} took CS50")
+        self._pdf.text(x=40, y=70, txt=f"{name} took CS50")
         self._pdf.output("shirtificate.pdf")
 
 name = input("Name: ")
