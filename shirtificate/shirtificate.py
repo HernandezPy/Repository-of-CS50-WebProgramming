@@ -3,7 +3,6 @@ from fpdf import FPDF
 
 class PDF(FPDF):
     def __init__(self, name):
-        self.name = name
         self._pdf = FPDF(orientation="P", format="A4")
         self._pdf.add_page()
         self._pdf.set_font("Arial", "B", size=40)
@@ -11,7 +10,7 @@ class PDF(FPDF):
         self._pdf.image("shirtificate.png", x=15, y=60, w=180)
         self._pdf.set_font("Arial", "B", 25)
         self._pdf.set_text_color(255, 255, 255)
-        self._pdf.set.text(x=55, y=130, txt=f"{self.name} took CS50")
+        self._pdf.settext(x=55, y=130, txt=f"{self.name} took CS50")
         self._pdf.output("shirtificate.pdf")
 
 name = input("Name: ")
