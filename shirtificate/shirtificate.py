@@ -8,9 +8,9 @@ class PDF(FPDF):
         self._pdf.set_font("Arial", "B", size=40)
         self._pdf.cell(0, 20, "CS50 Shirtificate", ln=True, align="C")
         self._pdf.image("shirtificate.png", x=15, y=60, w=180)
-        self._pdf.set_font_size(23)
+        self._pdf.set_font("Arial", "B", 25)
         self._pdf.set_text_color(255, 255, 255)
-        self._pdf.text(x=40, y=70, txt=f"{name} took CS50")
+        self._pdf.text(x=55, y=140, txt=f"{name} took CS50")
         self._pdf.output("shirtificate.pdf")
 
 name = input("Name: ")
