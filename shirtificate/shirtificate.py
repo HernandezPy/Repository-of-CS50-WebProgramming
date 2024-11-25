@@ -15,5 +15,5 @@ class PDF():
 
 name = input("Name: ")
 pdf = PDF(name)
-print(")
+print("Printed shirtificate as PDF")
 
