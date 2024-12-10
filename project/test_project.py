@@ -9,9 +9,10 @@ def data():
         "d": ("General Dentistry", 150),
         "e": ("Crown and Bridgework", 75),
     }
+    for key, (work, cost) in data.item():
+        return f"{key}: {work} - {cost}"
 
-
-def test_table_of_information(data):
+def test_table_of_information():
     output = table_of_information(data)
     expected_output = [
         "a: Full Mouth Restoration, 250",
@@ -23,7 +24,7 @@ def test_table_of_information(data):
     assert output == expected_output
 
 
-def test_job_cost(data):
+def test_job_cost():
     selected_job = "a"
     work, cost = data[selected_job]
     assert work == "Full Mouth Restoration"
@@ -33,7 +34,7 @@ def test_job_cost(data):
     assert invalid_job not in data
 
 
-def test_discount_in_advance(data):
+def test_discount_in_advance():
     selected_job = "a"
     work, cost = data[selected_job]
     advance_payment = True
