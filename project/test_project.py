@@ -1,7 +1,7 @@
 import pytest
 from project import table_of_information, job_cost, discount_in_advance
 
-def main()
+def main():
     data = {
         "a": ("Full Mouth Restoration", 250),
         "b": ("Dental Implants", 50),
