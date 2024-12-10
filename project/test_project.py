@@ -11,7 +11,7 @@ def data():
     }
 
 
-def test_table_of_information():
+def test_table_of_information(data):
     output = table_of_information(data)
     expected_output = [
         "a: Full Mouth Restoration, 250",
@@ -23,7 +23,7 @@ def test_table_of_information():
     assert output == expected_output
 
 
-def test_job_cost():
+def test_job_cost(data):
     selected_job = "a"
     work, cost = data[selected_job]
     assert work == "Full Mouth Restoration"
@@ -33,7 +33,7 @@ def test_job_cost():
     assert invalid_job not in data
 
 
-def test_discount_in_advance():
+def test_discount_in_advance(data):
     selected_job = "a"
     work, cost = data[selected_job]
     advance_payment = True
