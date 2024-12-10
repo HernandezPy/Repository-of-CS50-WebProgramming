@@ -13,14 +13,15 @@ data = {
 
 def test_table_of_information():
     output = table_of_information(data)
-    expected_output = [
-        "Customer Services Available",
-        "a: Full Mouth Restoration - $250",
-        "b: Dental Implants - $50",
-        "c: Teeth Whitening - $100",
-        "d: General Dentistry - $150",
-        "e: Crown and Bridgework - $75"
-    ]
+    expected_output = {
+
+        "a": ("Full Mouth Restoration", 250),
+        "b": ("Dental Implants", 50),
+        "c": ("Teeth Whitening", 100),
+        "d": ("General Dentistry", 150),
+        "e": ("Crown and Bridgework", 75),
+    }
+
     assert output == expected_output
 
 
