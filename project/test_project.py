@@ -1,6 +1,15 @@
 import pytest
 from project import table_of_information, job_cost, discount_in_advance
 
+def main()
+    data = {
+        "a": ("Full Mouth Restoration", 250),
+        "b": ("Dental Implants", 50),
+        "c": ("Teeth Whitening", 100),
+        "d": ("General Dentistry", 150),
+        "e": ("Crown and Bridgework", 75),
+    }
+
 
 def test_table_of_information(data):
     output = table_of_information(data)
