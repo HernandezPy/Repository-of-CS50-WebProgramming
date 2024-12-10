@@ -1,16 +1,6 @@
 import pytest
 from project import table_of_information, job_cost, discount_in_advance
 
-def data():
-    {
-        "a": ("Full Mouth Restoration", 250),
-        "b": ("Dental Implants", 50),
-        "c": ("Teeth Whitening", 100),
-        "d": ("General Dentistry", 150),
-        "e": ("Crown and Bridgework", 75),
-    }
-    for key, (work, cost) in data.item():
-        return f"{key}: {work} - {cost}"
 
 def test_table_of_information():
     output = table_of_information(data)
@@ -25,22 +15,12 @@ def test_table_of_information():
 
 
 def test_job_cost():
-    selected_job = "a"
-    work, cost = data[selected_job]
-    assert work == "Full Mouth Restoration"
-    assert cost == 250
-
-    invalid_job = "f"
-    assert invalid_job not in data
+    assert job_cost("a") == 250.0
+    assert job_cost("b") == 50.0
+    assert job_cost("c") == 100.0
 
 
 def test_discount_in_advance():
-    selected_job = "a"
-    work, cost = data[selected_job]
-    advance_payment = True
-    discount_total = cost * 0.5 if advance_payment else cost
-    assert discount_total == 125.0
-
-    advance_payment = False
-    full_total = cost * 0.5 if advance_payment else cost
-    assert full_total == 250.0
+    assert discount_in_advance("a") == 150.0
+    assert discount_in_advance("b") == 25.0
+    assert discount_in advance("c") == 50.0
