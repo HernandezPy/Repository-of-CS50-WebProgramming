@@ -1,8 +1,8 @@
 import pytest
 from project import table_of_information, job_cost, discount_in_advance
 
-def main():
-    data = {
+def data():
+    {
         "a": ("Full Mouth Restoration", 250),
         "b": ("Dental Implants", 50),
         "c": ("Teeth Whitening", 100),
@@ -11,7 +11,7 @@ def main():
     }
 
 
-def test_table_of_information(data):
+def test_table_of_information():
     output = table_of_information(data)
     expected_output = [
         "a: Full Mouth Restoration, 250",
@@ -23,7 +23,7 @@ def test_table_of_information(data):
     assert output == expected_output
 
 
-def test_job_cost(data):
+def test_job_cost():
     selected_job = "a"
     work, cost = data[selected_job]
     assert work == "Full Mouth Restoration"
@@ -33,7 +33,7 @@ def test_job_cost(data):
     assert invalid_job not in data
 
 
-def test_discount_in_advance(data):
+def test_discount_in_advance():
     selected_job = "a"
     work, cost = data[selected_job]
     advance_payment = True
