@@ -23,4 +23,4 @@ def test_job_cost():
 def test_discount_in_advance():
     assert discount_in_advance("a") == 150.0
     assert discount_in_advance("b") == 25.0
-    assert discount_in advance("c") == 50.0
+    assert discount_in_advance("c") == 50.0
