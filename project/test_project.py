@@ -1,5 +1,5 @@
 import pytest
-from Project import table_of_information, job_cost, discount_in_advance
+from project import table_of_information, job_cost, discount_in_advance
 
 
 def test_table_of_information(data):
