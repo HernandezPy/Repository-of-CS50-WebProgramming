@@ -34,10 +34,10 @@ def test_job_cost():
 
 def test_discount_in_advance():
     assert discount_in_advance == "Your amount to pay with discount is: $125.00"
-    assert discount_in_advance == 125.0
+    assert discount_in_advance == 125.00
 
     assert discount_in_advance == "You have to pay full amount: $250.00"
-    assert discount_in_advance == 250.0
+    assert discount_in_advance == 250.00
 
     assert discount_in_advance == "Invalid option"
-    assert discount_in_advance == 0
+    assert discount_in_advance == 00
