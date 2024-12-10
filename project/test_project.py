@@ -25,23 +25,18 @@ def test_table_of_information():
 
 
 def test_job_cost():
-    assert job_cost(data, "a") == 250
-    assert job_cost(data, "b") == 50
-    assert job_cost(data, "c") == 100
-    assert job_cost(data, "f") == 0
+    assert job_cost("a") == 250
+    assert job_cost("b") == 50
+    assert job_cost("c") == 100
+    assert job_cost("f") == 0
 
 
 def test_discount_in_advance():
-    message, discounted_total = discount_in_advance(data, "a", True)
-    assert message == "Your amount to pay with discount is: $125.00"
-    assert discounted_total == 125.0
+    assert discount_in_advance == "Your amount to pay with discount is: $125.00"
+    assert discount_in_advance == 125.0
 
+    assert discount_in_advance == "You have to pay full amount: $250.00"
+    assert discount_in_advance == 250.0
 
-    message, full_total = discount_in_advance(data, "a", False)
-    assert message == "You have to pay full amount: $250.00"
-    assert full_total == 250.0
-
-
-    message, total = discount_in_advance(data, "f", True)
-    assert message == "Invalid option"
-    assert total == 0
+    assert discount_in_advance == "Invalid option"
+    assert discount_in_advance == 0
