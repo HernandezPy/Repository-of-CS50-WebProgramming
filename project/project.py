@@ -20,7 +20,7 @@ def table_of_information(data):
 
 def job_cost(data):
     customer = input("Select the job to be done: (a, b, c, d, e): ")
-    if customer.lower() in data:
+    if customer in data:
         work, total = data[customer]
         print(f"You selected: {work}, you're paying ${total}")
         return total
