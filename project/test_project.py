@@ -17,6 +17,7 @@ def test_table_of_information():
 
 
 def test_selected_job():
+    selected = True
     assert job_cost("a") == "Full Mouth Restoration, 250"
     assert job_cost("b") == "Dental Implants, 50"
     assert job_cost("c") == "Teeth Whitening, 100"
