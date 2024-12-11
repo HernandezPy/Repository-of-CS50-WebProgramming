@@ -17,8 +17,8 @@ def test_table_of_information(capsys):
     capture = capsys.readouterr()
     table = [[key.upper(), work, f"${cost}"] for key, (work, cost) in data.items()]
     headers = ["Option", "Service", "Cost"]
-    expected_output = tabulate(table, headers, tablefmt="grid")
-    assert capture.out == expected_output
+    expected_output = tabulate(table, headers, tablefmt="grid") + "\n"
+    assert capture.out.strip() == expected_output.strip()
 
 
 def test_job_cost(monkeypatch):
