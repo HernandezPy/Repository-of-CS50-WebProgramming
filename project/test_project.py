@@ -1,8 +1,9 @@
 import pytest
-from project import table_of_information, job_cost, discount_in_advance
-
+from tabulate import tabulate
+from Project import table_of_information, job_cost, discount_in_advance
 
 data = {
+
     "a": ("Full Mouth Restoration", 250),
     "b": ("Dental Implants", 50),
     "c": ("Teeth Whitening", 100),
@@ -10,34 +11,34 @@ data = {
     "e": ("Crown and Bridgework", 75),
 }
 
-
-def test_table_of_information():
-    output = table_of_information(data)
-    expected_output = {
-
-        "a": ("Full Mouth Restoration", 250),
-        "b": ("Dental Implants", 50),
-        "c": ("Teeth Whitening", 100),
-        "d": ("General Dentistry", 150),
-        "e": ("Crown and Bridgework", 75),
-    }
-
-    assert output == expected_output
+table_of_information(data)
+discount_in_advance(data)
 
 
-def test_job_cost():
-    assert job_cost("a") == 250
-    assert job_cost("b") == 50
-    assert job_cost("c") == 100
-    assert job_cost("f") == 0
+def test_table_of_information(capsys):
+    table_of_information(data)
+    capture = capsys.readouterr()
+    table = [[key.upper(), work, f"${cost}"] for key, (work, cost) in data.items()]
+    headers = ["Options", "Service", "Cost"]
+    expected_output = tabulate(table, headers, tablefmt="grid") + "\n"
+    assert capture.out == expected_output
 
 
-def test_discount_in_advance():
-    assert discount_in_advance == "Your amount to pay with discount is: $125.00"
-    assert discount_in_advance == 125.00
+def test_job_cost(monkeypatch):
+    monkeypatch.setattr("builtins.input", lambda _: "a")
+    assert job_cost(data) == 250
+    monkeypatch.setattr("builtins.input", lambda _: "b")
+    assert job_cost(data) == 50
+    monkeypatch.setattr("builtins.input", lambda _: "z")
+    assert job_cost(data) == 0
 
-    assert discount_in_advance == "You have to pay full amount: $250.00"
-    assert discount_in_advance == 250.00
 
-    assert discount_in_advance == "Invalid option"
-    assert discount_in_advance == 00
+def test_discount_in_advance(monkeypatch, capsys):
+    monkeypatch.setattr("builtins.input", lambda _: "yes")
+    discount_in_advance(150)
+    capture = capsys.readouterr()
+    assert "Your amount to pay with discount is: $75.00" in capture.out
+    monkeypatch.setattr("builtins.input", lambda _: "no")
+    discount_in_advance(150)
+    capture = capsys.readouterr()
+    assert "You have to pay full amount: $150.00" in capture.out

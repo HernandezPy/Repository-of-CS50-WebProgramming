@@ -1,3 +1,6 @@
+from tabulate import tabulate
+
+
 def main():
     data = {
 
@@ -9,36 +12,39 @@ def main():
     }
 
     table_of_information(data)
-    discount_in_advance(data)
+    total_cost = job_cost(data)
+    if total_cost > 0:
+        discount_in_advance(total_cost)
 
 
 def table_of_information(data):
-    print("Customer Services Available")
-    for key, (work, cost) in data.items():
-        print(f"{key}: {work} - ${cost}")
+    table = [[key.upper(), work, f"${cost}"] for key, (work, cost) in data.items()]
+    headers = ["Option", "Service", "Cost"]
+    print(tabulate(table, headers, tablefmt="grid"))
 
 
 def job_cost(data):
-    customer = input("Select the job to be done: (a, b, c, d, e): ")
-    if customer in data:
-        work, total = data[customer]
-        print(f"You selected: {work}, you're paying ${total}")
-        return total
+    selection = input("Select the service that you want: (a, b, c, d, e): ").lower().strip()
+    if selection in data:
+        work, cost = data[selection]
+        print(f"You selected: {work}. you will pay ${cost:.2f}. ")
+        return cost
     else:
         print("Please select a valid option")
         return 0
 
 
-def discount_in_advance(data):
-    total = job_cost(data)
-    if total == 0:
-        return
+def discount_in_advance(total):
     print("Did you know that if you pay in advance you receive a 50% discount?")
     advance = input("Would you like to pay in advance? [yes/no]: ").strip().lower()
+    discount_total = total * 0.5
     if advance == "yes":
-        print(f"Your amount to pay with discount is: ${total * 0.5:.2f}")
-    else:
+        print(f"Your amount to pay with discount is: ${discount_total:.2f}")
+    elif advance == "no":
         print(f"You have to pay full amount: ${total:.2f}")
+    else:
+        print("Invalid option")
+        print("You have to choose yes or no")
 
 
 if __name__ == "__main__":
