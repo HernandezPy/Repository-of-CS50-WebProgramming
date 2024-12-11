@@ -11,9 +11,6 @@ data = {
     "e": ("Crown and Bridgework", 75),
 }
 
-table_of_information(data)
-discount_in_advance(data)
-
 
 def test_table_of_information(capsys):
     table_of_information(data)
