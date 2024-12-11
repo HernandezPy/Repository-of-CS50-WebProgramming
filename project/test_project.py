@@ -16,7 +16,7 @@ def test_table_of_information(capsys):
     table_of_information(data)
     capture = capsys.readouterr()
     table = [[key.upper(), work, f"${cost}"] for key, (work, cost) in data.items()]
-    headers = ["Options", "Service", "Cost"]
+    headers = ["Option", "Service", "Cost"]
     expected_output = tabulate(table, headers, tablefmt="grid")
     assert capture.out == expected_output
 
