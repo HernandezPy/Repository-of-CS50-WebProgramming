@@ -30,11 +30,14 @@ def test_job_cost(monkeypatch):
     assert job_cost(data) == 0
 
 
-def test_discount_in_advance(monkeypatch, capsys):
+def test_discount_in_advance_yes(monkeypatch, capsys):
     monkeypatch.setattr("builtins.input", lambda _: "yes")
     discount_in_advance(150)
     capture = capsys.readouterr()
     assert "Your amount to pay with discount is: $75.00" in capture.out
+
+
+def test_discount_in_advance_no(monkeypatch, capsys):
     monkeypatch.setattr("builtins.input", lambda _: "no")
     discount_in_advance(150)
     capture = capsys.readouterr()
