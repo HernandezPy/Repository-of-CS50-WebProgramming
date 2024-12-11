@@ -1,6 +1,6 @@
 import pytest
 from tabulate import tabulate
-from Project import table_of_information, job_cost, discount_in_advance
+from project import table_of_information, job_cost, discount_in_advance
 
 data = {
 

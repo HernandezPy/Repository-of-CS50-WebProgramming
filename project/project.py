@@ -27,7 +27,7 @@ def job_cost(data):
     selection = input("Select the service that you want: (a, b, c, d, e): ").lower().strip()
     if selection in data:
         work, cost = data[selection]
-        print(f"You selected: {work}. you will pay ${cost:.2f}. ")
+        print(f"You selected: {work}. you will pay ${cost:.2f} ")
         return cost
     else:
         print("Please select a valid option")
