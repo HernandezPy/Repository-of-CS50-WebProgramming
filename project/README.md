@@ -1,4 +1,3 @@
-# YOUR PROJECT TITLE
-#### Video Demo: <URL HERE>
-#### Description:
-TODO
+# Going to the Dentist
+#### Video Demo: <https://youtu.be/URZ6zilNmnU>
+#### Description: 
