@@ -1,0 +1,178 @@
+body {
+    background: black;
+
+}
+.upright {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+ul > li {
+    margin: 10px;
+}
+
+.googleback {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+
+}
+a:hover {
+    color: blue;
+}
+
+.bar {
+    display:flex;
+    z-index:3;
+    position:relative;
+    min-height:44px;
+    border:1px solid transparent;
+    background: white;
+    box-shadow:none;
+    border-radius:24px;
+    margin:0 auto;
+    width: calc(638px + 6px);
+
+    max-width:584px;
+}
+
+.button {
+    margin-top: 60px;
+    background-color:#303134;
+    border:1px solid #303134;
+    border-radius:4px;
+    color:#e8eaed;
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    margin-right: 15px;
+    padding:0 16px;
+    line-height:27px;
+    height:36px;
+    min-width:54px;
+    text-align: center;
+    cursor:pointer;
+    user-select:none
+}
+.leftsearch {
+    color: coral;
+
+}
+
+.line {
+    margin-top: 30px;
+    border-color: var();
+    border-bottom: 1px solid white;
+}
+.adjust {
+    float: left;
+    display: inline-block;
+    min-width: 167px;
+    width: 16%;
+    font-size: 16px;
+    min-height: 42px;
+    font-weight: 500;
+    color: #333;
+    vertical-align: middle;
+}
+
+.find {
+    padding: 50px;
+    color: white;
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.space {
+    float: left;
+    display: inline-block;
+    min-width: 167px;
+    min-height: 10px;
+    vertical-align: middle;
+    width: 25%;
+}
+.leftoutsidebox {
+    color: white;
+}
+.box {
+    padding: 50px;
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cell {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.middespace {
+    width: 200px;
+    color: white;
+    padding-left: 50px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.to {
+    color: white;
+}
+.textinput {
+    width: 550px;
+}
+.tobox {
+    width: 255px;
+}
+.bluebuttom {
+    display: flex;
+    justify-content: flex-end;
+    width: 810px;
+    margin-top: 20px;
+}
+.inputblue {
+    user-select: none;
+    box-shadow: none;
+    background: #8ab4f8;
+    border-color: #8ab4f8;
+    color: white;
+    font-family: Arial,sans-serif;
+    padding: 9px;
+}
+.position {
+    float: left;
+  display: inline-block;
+  width: 32%;
+  min-width: 160px;
+  margin: 0 0 8px 1%;
+  color: #555;
+  font-size: 11px;
+  padding-left: 5px;
+  vertical-align: middle;
+  position: relative;
+}
+.lefttext {
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.twopoints {
+    font-family: monospace;
+    font-size: 11px;
+    white-space: pre;
+    color: white;
+
+}
