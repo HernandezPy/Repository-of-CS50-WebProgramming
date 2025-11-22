@@ -50,6 +50,7 @@
         "C_Cpp.enhancedColorization": "enabled",
         "C_Cpp.errorSquiggles": "disabled",
         "C_Cpp.formatting": "clangFormat",
+        "chat.disableAIFeatures": true,
         "cs50.watchPorts": [
           5000,
           8080,
@@ -99,7 +100,6 @@
           "Codeium.codeium",
           "Codeium.codeium-enterprise-updater",
           "github.copilot",
-          "github.copilot-nightly",
           "ms-toolsai.vscode-jupyter-cell-tags",
           "tabnine.tabnine-vscode"
         ],
@@ -146,11 +146,31 @@
         "problems.decorations.enabled": false,
         "problems.visibility": false,
         "python.terminal.executeInFileDir": true,
+        "python.terminal.shellIntegration.enabled": false,
         "remote.autoForwardPorts": true,
-        "remote.autoForwardPortsFallback": 0,
         "remote.autoForwardPortsSource": "process",
         "remote.otherPortsAttributes": {
-          "onAutoForward": "silent"
+          "onAutoForward": "ignore"
+        },
+        "remote.portsAttributes": {
+          "5000": {
+            "onAutoForward": "silent"
+          },
+          "5900": {
+            "onAutoForward": "silent"
+          },
+          "6081": {
+            "onAutoForward": "silent"
+          },
+          "8080": {
+            "onAutoForward": "silent"
+          },
+          "8082": {
+            "onAutoForward": "silent"
+          },
+          "8787": {
+            "onAutoForward": "silent"
+          }
         },
         "scm.countBadge": "off",
         "terminal.integrated.commandsToSkipShell": [
@@ -226,7 +246,7 @@
     8082,
     8787
   ],
-  "image": "ghcr.io/cs50/codespace:52599760badb99ad2ce8168e7301a6ec2a4d27f5",
+  "image": "ghcr.io/cs50/codespace:8565fe5fd8e2f4dbddc7abf5b8e4ecff6aecd3da",
   "mounts": [
     {
       "source": "/var/run/docker.sock",
