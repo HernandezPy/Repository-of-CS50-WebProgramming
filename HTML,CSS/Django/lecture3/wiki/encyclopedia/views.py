@@ -25,4 +25,5 @@ def entry(request, tittle):
     if html_error == None:
         return render(request, "encyclopedia/error.html")
     else:
-        
+        return render(request, "encyclopedia/entry.html")
+
