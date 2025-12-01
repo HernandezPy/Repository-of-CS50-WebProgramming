@@ -21,4 +21,6 @@ def index(request):
 
 
 def entry(request, tittle):
-    return
+    html_error = convert_md_to_html(tittle)
+    if html_error == None:
+        return render(request, "")
