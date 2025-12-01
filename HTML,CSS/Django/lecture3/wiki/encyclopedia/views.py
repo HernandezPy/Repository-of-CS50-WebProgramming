@@ -23,4 +23,4 @@ def index(request):
 def entry(request, tittle):
     html_error = convert_md_to_html(tittle)
     if html_error == None:
-        return render(request, "")
+        return render(request, "encyclopedia/error.html")
