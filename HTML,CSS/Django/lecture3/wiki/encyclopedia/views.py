@@ -18,5 +18,11 @@ def index(request):
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
-        "
+        "entry": util.get_entry()
+    })
+
+
+def index(request):
+    return render(request, "encyclopedia/index.html", {
+        "save": util.save_entry()
     })
