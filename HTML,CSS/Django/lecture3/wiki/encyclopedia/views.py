@@ -11,18 +11,10 @@ def convert_md_to_html(title):
         return markdownner.convert(content)
 
 def index(request):
+    entries = util.list_entries()
+    css_file = util.get_entry("CSS")
+    coffee = util.get_entry("coffee")
     return render(request, "encyclopedia/index.html", {
         "entries": util.list_entries()
     })
 
-
-def index(request):
-    return render(request, "encyclopedia/index.html", {
-        "entry": util.get_entry(tittle)
-    })
-
-
-def index(request):
-    return render(request, "encyclopedia/index.html", {
-        "save": util.save_entry(tittle, content)
-    })
