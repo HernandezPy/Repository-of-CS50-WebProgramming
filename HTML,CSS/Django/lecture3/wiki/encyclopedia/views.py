@@ -5,11 +5,11 @@ import util
 
 def convert_md_to_html(title):
     content = util.get_entry(title)
-    markdowner = Markdown.Markdown()
+    markdowner = Markdown()
     if content == None:
         return None
     else:
-        return markdownner.convert(content)
+        return markdowner.convert(content)
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
