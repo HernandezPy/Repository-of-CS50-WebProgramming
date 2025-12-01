@@ -10,3 +10,6 @@ def index(request):
         "entries": util.list_entries()
     })
 
+
+def entry(request, tittle):
+    
