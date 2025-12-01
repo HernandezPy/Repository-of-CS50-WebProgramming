@@ -12,4 +12,4 @@ def index(request):
 
 
 def entry(request, tittle):
-    
+    return 
