@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from markdown2 import Markdown
 
-import util
+from . import util
 
 def convert_md_to_html(title):
     content = util.get_entry(title)
