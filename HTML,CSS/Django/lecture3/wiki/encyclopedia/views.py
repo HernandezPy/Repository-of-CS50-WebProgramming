@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from markdown2 import Markdown
-
 from . import util
 
 def convert_md_to_html(title):
@@ -12,10 +11,12 @@ def convert_md_to_html(title):
         return markdownner.convert(content)
 
 def index(request):
-    entries = util.list_entries()
-    css_file = util.get("CSS")
-    apple = util.get_entry("apple")
     return render(request, "encyclopedia/index.html", {
         "entries": util.list_entries()
     })
 
+
+def index(request):
+    return render(request, "encyclopedia/index.html", {
+        "
+    })
