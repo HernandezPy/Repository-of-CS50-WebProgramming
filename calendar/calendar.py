@@ -1,4 +1,4 @@
-from calendar import *
+from calendar import*
 
 
 year = int(input("Enter Year: "))
