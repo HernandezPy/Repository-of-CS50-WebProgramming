@@ -1,7 +1,7 @@
 from calendar import *
 
 
-year = int(input("Enter Year"))
+year = int(input("Enter Year: "))
 print(calendar(year, 2, 1, 8,3))
 
 #2 = 2 characters for days (Mo, tu, etc)
