@@ -7,3 +7,6 @@ def index(request):
         "flights": Flight.objects.all()
     })
 
+
+def flight(request, flight_id):
+
