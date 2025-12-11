@@ -23,4 +23,4 @@ def passsenger(models.Model):
     flights = models.ManyToManyField(Flight, blank=True, related_name="passergers")
 
     def __str__(self):
-        return f"{self.first}
+        return f"{self.first} {self.last}"
