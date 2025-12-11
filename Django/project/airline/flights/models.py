@@ -17,7 +17,7 @@ class Flight(models.Model):
         return f"{self.id}: {self.origin} to {self.destination}"
 
 
-def passsenger(models.Model):
+class Passsenger(models.Model):
     first = models.Charfield(max_length=64)
     last = models.CharField(max_length=64)
     flights = models.ManyToManyField(Flight, blank=True, related_name="passergers")
