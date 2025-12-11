@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Flight
+from .models import Flight, Passenger
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
