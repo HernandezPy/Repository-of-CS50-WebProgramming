@@ -14,13 +14,13 @@ class Flight(models.Model):
     duration = models.IntegerField()
 
     def __str__(self):
-        return f"{self.id}: {self.origin} to {self.detination}"
+        return f"{self.id}: {self.origin} to {self.destination}"
 
 
-class Passsenger(models.Model):
-    first = models.Charfield(max_length=64)
+class Passenger(models.Model):
+    first = models.CharField(max_length=64)
     last = models.CharField(max_length=64)
-    flights = models.ManyToManyField(Flight, blank=True, related_name="passergers")
+    flights = models.ManyToManyField(Flight, blank=True, related_name="passengers")
 
     def __str__(self):
         return f"{self.first} {self.last}"
