@@ -18,4 +18,6 @@ class Flight(models.Model):
 
 
 def passsenger(models.Model):
-    
+    first = models.Charfield(max_length=64)
+    last = models.CharField(max_length=64)
+    flights = models.ManyToManyField(Flight, blank=True, related_name="passergers)
