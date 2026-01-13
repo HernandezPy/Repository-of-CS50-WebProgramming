@@ -41,13 +41,31 @@ function load_mailbox(mailbox) {
       // loop through emails and create a div for each
       emails.forEach(email => {
         // create div for each email
-        const new_mail = document.createElement('div');
-        new_mail.innerHTML = 'This is the content of the div.';
-        new_mail.addEventListener('click', function() {
-            console.log('This element has been clicked!')
+        const now = document.createElement('div');
+        row.className = 'email-row';
+        row.style.border = '1px solid #cc';
+        row.style.padding = '10px';
+        row.style.cursor = 'pointer';
+        // gray background if read
+        if (email.read) {
+          row.style.backgrounColor = '#f0f0f0';
+        } else {
+          row.style.backgrounColor = 'white';
+          row.style.fontWeight = 'bold';
+        }
+        row.innerHTML = `
+        <span>${email.sender}</span>
+        <span style="margin-left: 20px;">${email.subject}</span>
+        <span style="float: right;">${email.timestamp}</span>
+        `;
+        
+        row.addEventListener('click', () => {
+          console.log(`Opening email ID: ${email.id});
+          view_email(email.id); // your email detail function
         });
-        document.querySelector('#emails-view').append(new_mail);
-      })
+
+        document.querySelector('#emails-view').append(row);
+      });
     });
   }
 
