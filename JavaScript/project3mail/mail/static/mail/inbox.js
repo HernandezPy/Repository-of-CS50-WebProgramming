@@ -40,7 +40,8 @@ function load_mailbox(mailbox) {
    .then(emails => {
    // loop through emails and create a div for each
    emails.forEach(singleEmail => {
-    
+   // create div for each email
+   
    };)
    });
 }
