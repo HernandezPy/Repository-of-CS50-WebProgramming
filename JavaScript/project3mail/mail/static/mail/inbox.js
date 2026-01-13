@@ -38,10 +38,8 @@ function load_mailbox(mailbox) {
    fetch(`/emails/${mailbox}`)
    .then(response => response.json())
    .then(emails => {
-        // Print emails
-        console.log(emails);
-
-        // ... do something else with emails ...
+   // loop through emails and create a div for each
+   
    });
 }
 
