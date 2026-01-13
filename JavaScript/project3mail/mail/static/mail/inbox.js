@@ -94,9 +94,7 @@ function view_email(email_id) {
         // Marcar como leído
         fetch(`/emails/${email_id}`, {
           method: 'PUT',
-          body: JSON.stringify({
-            read: true
-          })
+          body: JSON.stringify({ read: true })
         });
       });
   }
