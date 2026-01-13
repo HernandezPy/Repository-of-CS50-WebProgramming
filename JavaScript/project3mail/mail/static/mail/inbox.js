@@ -49,7 +49,7 @@ function load_mailbox(mailbox) {
         row.style.cursor = 'pointer';
         // gray background if read
         if (email.read) {
-          row.style.backgroundColor = '#f0f0f0';
+          row.style.backgroundColor = 'gray';
         } else {
           row.style.backgrounColor = 'white';
           row.style.fontWeight = 'bold';
