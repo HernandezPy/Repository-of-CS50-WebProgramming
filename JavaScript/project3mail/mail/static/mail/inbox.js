@@ -52,7 +52,7 @@ function load_mailbox(mailbox) {
         } else {
           row.style.backgrounColor = 'white';
           row.style.fontWeight = 'bold';
-        }
+        }))
         row.innerHTML = `
         <span>${email.sender}</span>
         <span style="margin-left: 20px;">${email.subject}</span>
