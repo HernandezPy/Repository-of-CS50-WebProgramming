@@ -49,7 +49,7 @@ function load_mailbox(mailbox) {
         document.querySelector('#emails-view').append(new_mail);
       })
     });
-   }
+  }
 
 
 function send_email (event) {
