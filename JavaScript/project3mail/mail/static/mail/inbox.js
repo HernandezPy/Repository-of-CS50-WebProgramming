@@ -35,9 +35,9 @@ function load_mailbox(mailbox) {
   document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
 
   // Get the mails for the mailbox and user
-   fetch(`/emails/${mailbox}`)
-   .then(response => response.json())
-   .then(emails => {
+  fetch(`/emails/${mailbox}`)
+  .then(response => response.json())
+  .then(emails => {
       // loop through emails and create a div for each
       emails.forEach(singleEmail => {
         // create div for each email
