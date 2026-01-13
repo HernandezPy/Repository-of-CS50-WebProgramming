@@ -41,9 +41,9 @@ function load_mailbox(mailbox) {
       // loop through emails and create a div for each
       emails.forEach(singleEmail => {
         // create div for each email
-        const element = document.createElement('div');
-        element.innerHTML = 'This is the content of the div.';
-        element.addEventListener('click', function() {
+        const new_mail = document.createElement('div');
+        new_mail.innerHTML = 'This is the content of the div.';
+        new_mail.addEventListener('click', function() {
             console.log('This element has been clicked!')
         });
         document.querySelector('#container').append(element);
