@@ -33,7 +33,8 @@ function load_mailbox(mailbox) {
   document.querySelector('#email-detail-view').style.display = 'none';
 
   // Show the mailbox name
-  document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
+  const container = document.querySelector('#emails-view');
+  container.innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
 
   // Get the mails for the mailbox and user
   fetch(`/emails/${mailbox}`)
