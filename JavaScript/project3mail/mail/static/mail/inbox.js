@@ -58,11 +58,11 @@ function load_mailbox(mailbox) {
         <span style="margin-left: 20px;">${email.subject}</span>
         <span style="float: right;">${email.timestamp}</span>
         `;
-        
+
         row.addEventListener('click', () => {
           console.log(`Opening email ID: ${email.id});
           view_email(email.id); // your email detail function
-        });
+          });
 
         document.querySelector('#emails-view').append(row);
       });
