@@ -97,7 +97,7 @@ function view_email(email_id) {
           })
         });
       });
-}
+  }
 
 
 function send_email (event) {
