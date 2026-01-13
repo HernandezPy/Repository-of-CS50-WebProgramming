@@ -97,9 +97,6 @@ function view_email(email_id) {
           body: JSON.stringify({
             read: true
           })
-          .then( () => {
-            console.log(`Email ${email_id} read`);
-          });
         });
       });
   }
