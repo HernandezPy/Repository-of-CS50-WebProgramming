@@ -41,7 +41,7 @@ function load_mailbox(mailbox) {
       // loop through emails and create a div for each
       emails.forEach(email => {
         // create div for each email
-        const now = document.createElement('div');
+        const row = document.createElement('div');
         row.className = 'email-row';
         row.style.border = '1px solid #cc';
         row.style.padding = '10px';
