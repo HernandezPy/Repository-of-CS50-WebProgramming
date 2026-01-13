@@ -39,7 +39,9 @@ function load_mailbox(mailbox) {
    .then(response => response.json())
    .then(emails => {
    // loop through emails and create a div for each
-   
+   emails.forEach(singleEmail => {
+    
+   };)
    });
 }
 
