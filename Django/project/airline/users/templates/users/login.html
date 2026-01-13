@@ -9,8 +9,38 @@
     <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
         <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
+        <div style="position: relative;">
+            <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+            >
+            <span
+                onclick="togglePassword()"
+                style="
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                    user-select: none;
+            ">👁️</span>
+        </div>
         <input type="submit" value="Login">
+
     </form>
 
 {% endblock %}
+
+<scrip>
+    function togglePassword() {
+        const passwordInput = document.getElementById("password"):
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
+
+    }
+</scrip>

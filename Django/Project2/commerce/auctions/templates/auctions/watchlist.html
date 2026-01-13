@@ -1,0 +1,30 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<h2>My Watchlist</h2>
+
+{% if listings %}
+    <div class="row">
+        {% for listing in listings %}
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{% url 'listing' listing.id %}">{{ listing.title }}</a>
+                        </h5>
+                        <p class="card-text">Price: ${{ listing.price }}</p>
+
+                        <form action="{% url 'toggle_watchlist' listing.id %}" method="post">
+                            {% csrf_token %}
+                            <button class="btn btn-danger">Remove from Watchlist</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>You have no items in your watchlist.</p>
+{% endif %}
+
+{% endblock %}
