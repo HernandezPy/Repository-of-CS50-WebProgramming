@@ -69,6 +69,37 @@ function load_mailbox(mailbox) {
     });
   }
 
+function view_email(email_id) {
+
+    // Mostrar vista individual
+    document.querySelector('#emails-view').style.display = 'none';
+    document.querySelector('#compose-view').style.display = 'none';
+    document.querySelector('#email-detail-view').style.display = 'block';
+
+    fetch(`/emails/${email_id}`)
+      .then(response => response.json())
+      .then(email => {
+
+        document.querySelector('#email-detail-view').innerHTML = `
+          <p><strong>From:</strong> ${email.sender}</p>
+          <p><strong>To:</strong> ${email.recipients}</p>
+          <p><strong>Subject:</strong> ${email.subject}</p>
+          <p><strong>Timestamp:</strong> ${email.timestamp}</p>
+          <hr>
+          <p>${email.body}</p>
+        `;
+
+        // Marcar como leído
+        fetch(`/emails/${email_id}`, {
+          method: 'PUT',
+          body: JSON.stringify({
+            read: true
+          })
+        });
+      });
+}
+
+
 function send_email (event) {
   event.preventDefault();
 
