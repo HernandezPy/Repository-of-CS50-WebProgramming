@@ -39,7 +39,7 @@ function load_mailbox(mailbox) {
   .then(response => response.json())
   .then(emails => {
       // loop through emails and create a div for each
-      emails.forEach(singleEmail => {
+      emails.forEach(email => {
         // create div for each email
         const new_mail = document.createElement('div');
         new_mail.innerHTML = 'This is the content of the div.';
