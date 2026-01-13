@@ -46,7 +46,7 @@ function load_mailbox(mailbox) {
         new_mail.addEventListener('click', function() {
             console.log('This element has been clicked!')
         });
-        document.querySelector('#emails-view').append(new_mail);
+        document.querySelector('#compose-view').append(new_mail);
       })
     });
   }
