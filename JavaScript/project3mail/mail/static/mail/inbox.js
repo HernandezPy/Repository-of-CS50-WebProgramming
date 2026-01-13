@@ -41,7 +41,12 @@ function load_mailbox(mailbox) {
    // loop through emails and create a div for each
    emails.forEach(singleEmail => {
    // create div for each email
-   
+element.innerHTML = 'This is the content of the div.';
+e   const element = document.createElement('div');
+lement.addEventListener('click', function() {
+    console.log('This element has been clicked!')
+});
+document.querySelector('#container').append(element);
    };)
    });
 }
