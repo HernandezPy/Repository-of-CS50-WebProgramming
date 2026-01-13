@@ -51,7 +51,7 @@ function load_mailbox(mailbox) {
         if (email.read) {
           row.style.backgroundColor = 'gray';
         } else {
-          row.style.backgrounColor = 'white';
+          row.style.backgroundColor = 'white';
           row.style.fontWeight = 'bold';
         }
         row.innerHTML = `
