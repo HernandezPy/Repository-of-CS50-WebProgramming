@@ -96,8 +96,9 @@ function view_email(email_id) {
           method: 'PUT',
           body: JSON.stringify({
             read: true
-          }).then( () => {
-            console.log(email.id, email.read);
+          })
+          .then( () => {
+            console.log(`Email ${email_id} read`);
           });
         });
       });
