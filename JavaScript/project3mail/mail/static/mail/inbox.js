@@ -43,12 +43,12 @@ function load_mailbox(mailbox) {
         // create div for each email
         const row = document.createElement('div');
         row.className = 'email-row';
-        row.style.border = '1px solid #cc';
+        row.style.border = '1px solid #ccc';
         row.style.padding = '10px';
         row.style.cursor = 'pointer';
         // gray background if read
         if (email.read) {
-          row.style.backgrounColor = '#f0f0f0';
+          row.style.backgroundColor = '#f0f0f0';
         } else {
           row.style.backgrounColor = 'white';
           row.style.fontWeight = 'bold';
@@ -67,7 +67,6 @@ function load_mailbox(mailbox) {
         document.querySelector('#emails-view').append(row);
       });
     });
-  }
 
 
 function send_email (event) {
