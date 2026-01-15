@@ -103,9 +103,10 @@ function view_email(email_id, mailbox) {
         `;
 
         // control of archive button
+        const current_user = document.querySelector('body').dataset.user;
         const archive = document.querySelector('#archive-btn');
         console.log("Mailbox actual:", mailbox);
-        if (mailbox === 'sent') {
+        if (email.sender === current_user) {
           archive.style.display = 'none';
         } else {
           archive.style.display = 'block';
