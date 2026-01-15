@@ -84,6 +84,7 @@ function view_email(email_id, mailbox) {
     document.querySelector('#emails-view').style.display = 'none';
     document.querySelector('#compose-view').style.display = 'none';
     document.querySelector('#email-detail-view').style.display = 'block';
+    document.querySelector('#archive-btn').style.display = 'none';
 
 
     fetch(`/emails/${email_id}`)
@@ -106,7 +107,7 @@ function view_email(email_id, mailbox) {
         const archive = document.querySelector('#archive-btn');
         if (mailbox === 'sent') {
           archive.style.display = 'none';
-        } 
+        }
 
         // Marcar como leído
         fetch(`/emails/${email_id}`, {
