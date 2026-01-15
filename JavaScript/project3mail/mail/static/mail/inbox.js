@@ -106,9 +106,7 @@ function view_email(email_id, mailbox) {
         const archive = document.querySelector('#archive-btn');
         if (mailbox === 'sent') {
           archive.style.display = 'none';
-        } else {
-          archive.style.display = 'block';
-        }
+        } 
 
         // Marcar como leído
         fetch(`/emails/${email_id}`, {
