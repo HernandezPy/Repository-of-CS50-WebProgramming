@@ -110,7 +110,7 @@ function view_email(email_id) {
               archived: !email.archived
             })
           }).then(() => {
-            fetch(`/emails/$email_id`)
+            fetch(`/emails/${email_id}`)
             .then(response => response.json())
             .then(updated_email => {
               document.querySelector('#archive-btn').innerText =
