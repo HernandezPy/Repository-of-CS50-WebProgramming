@@ -32,13 +32,7 @@ function load_mailbox(mailbox) {
   document.querySelector('#compose-view').style.display = 'none';
   document.querySelector('#email-detail-view').style.display = 'none';
 
-  // Not show the button en sent box
-  const archive_button = document.querySelector('#archive-btn');
-  if (mailbox === 'sent') {
-    archive_button.style.display = 'none';
-  } else {
-    archive_button.style.display = 'block';
-  }
+
 
   // Show the mailbox name
   const container = document.querySelector('#emails-view');
@@ -138,7 +132,6 @@ function send_email (event) {
   const recipients = document.querySelector('#compose-recipients').value;
   const subject = document.querySelector('#compose-subject').value;
   const body = document.querySelector('#compose-body').value;
-
 
 
   // Send data to backend
