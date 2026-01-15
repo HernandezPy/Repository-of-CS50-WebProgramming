@@ -130,7 +130,7 @@ function send_email (event) {
   const recipients = document.querySelector('#compose-recipients').value;
   const subject = document.querySelector('#compose-subject').value;
   const body = document.querySelector('#compose-body').value;
-  const archive = document.querySelector('#archive-btn').style.display = 'block';
+
 
 
   // Send data to backend
@@ -141,11 +141,13 @@ function send_email (event) {
       subject: subject,
       body: body,
     })
+
   })
   .then(response => response.json())
   .then(result => {
     // Print result
     console.log(result);
     load_mailbox('sent');
+    const archive = document.querySelector('#archive-btn').style.display = 'none';
   });
 }
