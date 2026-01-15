@@ -43,14 +43,6 @@ function load_mailbox(mailbox) {
   .then(response => response.json())
   .then(emails => {
 
-      // control of archive button
-      const archive = document.querySelector('#archive-btn');
-      if (mailbox === 'sent') {
-        archive.style.display = 'none';
-      } else {
-        archive.style.display = 'block';
-      }
-
       // loop through emails and create a div for each
       emails.forEach(email => {
         console.log(email.id, email.read);
@@ -92,6 +84,14 @@ function view_email(email_id) {
     document.querySelector('#emails-view').style.display = 'none';
     document.querySelector('#compose-view').style.display = 'none';
     document.querySelector('#email-detail-view').style.display = 'block';
+
+    // control of archive button
+    const archive = document.querySelector('#archive-btn');
+    if (mailbox === 'sent') {
+      archive.style.display = 'none';
+    } else {
+      archive.style.display = 'block';
+    }
 
     fetch(`/emails/${email_id}`)
       .then(response => response.json())
