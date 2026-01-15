@@ -85,13 +85,6 @@ function view_email(email_id) {
     document.querySelector('#compose-view').style.display = 'none';
     document.querySelector('#email-detail-view').style.display = 'block';
 
-    // control of archive button
-    const archive = document.querySelector('#archive-btn');
-    if (mailbox === 'sent') {
-      archive.style.display = 'none';
-    } else {
-      archive.style.display = 'block';
-    }
 
     fetch(`/emails/${email_id}`)
       .then(response => response.json())
