@@ -51,8 +51,8 @@ function load_mailbox(mailbox) {
         row.style.border = '1px solid #ccc';
         row.style.padding = '10px';
         row.style.cursor = 'pointer';
-        // gray background if read
 
+        // gray background if read
         if (email.read) {
           row.style.backgroundColor = 'gray';
         } else {
