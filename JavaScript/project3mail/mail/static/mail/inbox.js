@@ -92,6 +92,14 @@ function view_email(email_id) {
 
         const detail = document.querySelector('#email-detail-view');
 
+        // control of archive button
+        const archive = document.querySelector('#archive-btn');
+        if (mailbox === 'sent') {
+          archive.style.display = 'none';
+        } else {
+          archive.style.display = 'block';
+        }
+
         detail.innerHTML = `
           <p><strong>From:</strong> ${email.sender}</p>
           <p><strong>To:</strong> ${email.recipients}</p>
