@@ -148,7 +148,5 @@ function send_email (event) {
     // Print result
     console.log(result);
     load_mailbox('sent');
-  
-    const archive = document.querySelector('#archive-btn').style.display = 'none';
   });
 }
