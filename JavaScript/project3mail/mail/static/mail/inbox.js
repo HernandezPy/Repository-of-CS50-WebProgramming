@@ -42,7 +42,15 @@ function load_mailbox(mailbox) {
   fetch(`/emails/${mailbox}`)
   .then(response => response.json())
   .then(emails => {
-    
+
+      // control of archive button
+      conts archive = document.querySelector('#archive-btn');
+      if (mailbox === 'sent') {
+        archive.style.display = 'none';
+      } else {
+        archive.style.display = 'block';
+      }
+
       // loop through emails and create a div for each
       emails.forEach(email => {
         console.log(email.id, email.read);
