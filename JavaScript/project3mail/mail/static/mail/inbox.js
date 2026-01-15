@@ -70,7 +70,7 @@ function load_mailbox(mailbox) {
         row.addEventListener('click', () => {
           row.style.backgroundColor = 'gray';
           row.style.fontWeight = 'normal';
-          view_email(email.id); // your email detail function
+          view_email(email.id, mailbox); // your email detail function
         });
 
         document.querySelector('#emails-view').append(row);
