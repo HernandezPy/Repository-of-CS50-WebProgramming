@@ -31,7 +31,14 @@ function load_mailbox(mailbox) {
   document.querySelector('#emails-view').style.display = 'block';
   document.querySelector('#compose-view').style.display = 'none';
   document.querySelector('#email-detail-view').style.display = 'none';
-  document.querySelector
+
+  // Not show the button en sent box
+  const archive_button = document.querySelector('#archive-btn');
+  if (mailbox === 'sent') {
+    archive_button.style.display = 'none';
+  } else {
+    archive_button.styele.display = 'block';
+  }
 
   // Show the mailbox name
   const container = document.querySelector('#emails-view');
