@@ -42,6 +42,7 @@ function load_mailbox(mailbox) {
   .then(emails => {
       // loop through emails and create a div for each
       emails.forEach(email => {
+        console.log(email.id, email.read);
         // create div for each email
         const row = document.createElement('div');
         row.className = 'email-row';
@@ -49,6 +50,7 @@ function load_mailbox(mailbox) {
         row.style.padding = '10px';
         row.style.cursor = 'pointer';
         // gray background if read
+
         if (email.read) {
           row.style.backgroundColor = 'gray';
         } else {
@@ -62,7 +64,8 @@ function load_mailbox(mailbox) {
         `;
 
         row.addEventListener('click', () => {
-          console.log(`Opening email ID: ${email.id}`);
+          row.style.backgroundColor = 'gray';
+          row.style.fontWeight = 'normal';
           view_email(email.id); // your email detail function
         });
 
@@ -82,13 +85,16 @@ function view_email(email_id) {
       .then(response => response.json())
       .then(email => {
 
-        document.querySelector('#email-detail-view').innerHTML = `
+        const detail = document.querySelector('#email-detail-view');
+
+        detail.innerHTML = `
           <p><strong>From:</strong> ${email.sender}</p>
           <p><strong>To:</strong> ${email.recipients}</p>
           <p><strong>Subject:</strong> ${email.subject}</p>
           <p><strong>Timestamp:</strong> ${email.timestamp}</p>
           <hr>
           <p>${email.body}</p>
+          <button class="btn btn-sm btn-outline-primary" id="archive-btn">${email.archived ? 'Unarchive' : 'Archive'}</button>
         `;
 
         // Marcar como leído
@@ -96,8 +102,25 @@ function view_email(email_id) {
           method: 'PUT',
           body: JSON.stringify({ read: true })
         });
+        // logica del boton archive
+        document.querySelector('#archive-btn').onclick = () => {
+          fetch(`/emails/${email_id}`, {
+            method: 'PUT',
+            body: JSON.stringify({
+              archived: !email.archived
+            })
+          }).then(() => {
+            fetch(`/emails/$email_id`)
+            .then(response => response.json())
+            .then(updated_email => {
+              document.querySelector('#archive-btn').innerText =
+              updated_email.archived ? 'Unarchive' : 'Archive';
+            });
+          });
+        };
       });
   }
+
 
 
 function send_email (event) {
