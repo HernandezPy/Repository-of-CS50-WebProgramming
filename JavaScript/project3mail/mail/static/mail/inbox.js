@@ -126,8 +126,7 @@ function view_email(email_id, mailbox) {
             fetch(`/emails/${email_id}`)
             .then(response => response.json())
             .then(updated_email => {
-              document.querySelector('#archive-btn').innerText =
-              updated_email.archived ? 'Unarchive' : 'Archive';
+              archive.innerText = update_email.archived ? 'Unarchive' : 'Archive';
             });
           });
         };
