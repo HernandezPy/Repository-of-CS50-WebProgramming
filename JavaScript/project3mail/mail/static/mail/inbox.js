@@ -78,7 +78,7 @@ function load_mailbox(mailbox) {
     });
   }
 
-function view_email(email_id) {
+function view_email(email_id, mailbox) {
 
     // Mostrar vista individual
     document.querySelector('#emails-view').style.display = 'none';
@@ -92,14 +92,6 @@ function view_email(email_id) {
 
         const detail = document.querySelector('#email-detail-view');
 
-        // control of archive button
-        const archive = document.querySelector('#archive-btn');
-        if (mailbox === 'sent') {
-          archive.style.display = 'none';
-        } else {
-          archive.style.display = 'block';
-        }
-
         detail.innerHTML = `
           <p><strong>From:</strong> ${email.sender}</p>
           <p><strong>To:</strong> ${email.recipients}</p>
@@ -109,6 +101,14 @@ function view_email(email_id) {
           <p>${email.body}</p>
           <button class="btn btn-sm btn-outline-primary" id="archive-btn">${email.archived ? 'Unarchive' : 'Archive'}</button>
         `;
+
+        // control of archive button
+        const archive = document.querySelector('#archive-btn');
+        if (mailbox === 'sent') {
+          archive.style.display = 'none';
+        } else {
+          archive.style.display = 'block';
+        }
 
         // Marcar como leído
         fetch(`/emails/${email_id}`, {
