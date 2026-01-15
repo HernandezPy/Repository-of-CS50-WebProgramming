@@ -42,9 +42,11 @@ function load_mailbox(mailbox) {
   fetch(`/emails/${mailbox}`)
   .then(response => response.json())
   .then(emails => {
+    
       // loop through emails and create a div for each
       emails.forEach(email => {
         console.log(email.id, email.read);
+
         // create div for each email
         const row = document.createElement('div');
         row.className = 'email-row';
