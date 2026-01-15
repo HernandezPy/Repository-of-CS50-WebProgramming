@@ -31,6 +31,7 @@ function load_mailbox(mailbox) {
   document.querySelector('#emails-view').style.display = 'block';
   document.querySelector('#compose-view').style.display = 'none';
   document.querySelector('#email-detail-view').style.display = 'none';
+  document.querySelector
 
   // Show the mailbox name
   const container = document.querySelector('#emails-view');
