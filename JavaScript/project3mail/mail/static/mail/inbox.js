@@ -121,7 +121,7 @@ function view_email(email_id, mailbox) {
               archived: !email.archived
             })
           }).then(() => {
-            archive.innerText = email.archive ? 'Archive' : 'Unarchive';
+            archive.innerText = email.archived ? 'Archive' : 'Unarchive';
             email.archived = !email.archived;
           });
         };
