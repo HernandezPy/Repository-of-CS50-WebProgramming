@@ -130,6 +130,8 @@ function send_email (event) {
   const recipients = document.querySelector('#compose-recipients').value;
   const subject = document.querySelector('#compose-subject').value;
   const body = document.querySelector('#compose-body').value;
+  const archive = document.querySelector('#archive-btn').style.display = 'block';
+
 
   // Send data to backend
   fetch('/emails', {
