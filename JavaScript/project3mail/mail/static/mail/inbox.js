@@ -44,7 +44,7 @@ function load_mailbox(mailbox) {
   .then(emails => {
 
       // control of archive button
-      conts archive = document.querySelector('#archive-btn');
+      const archive = document.querySelector('#archive-btn');
       if (mailbox === 'sent') {
         archive.style.display = 'none';
       } else {
