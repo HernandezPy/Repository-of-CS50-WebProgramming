@@ -121,11 +121,8 @@ function view_email(email_id, mailbox) {
               archived: !email.archived
             })
           }).then(() => {
-            fetch(`/emails/${email_id}`)
-            .then(response => response.json())
-            .then(updated_email => {
-              archive.innerText = update_email.archived ? 'Unarchive' : 'Archive';
-            });
+            archive.innerText = email.archive ? 'Archive' : 'Unarchive';
+            email.archived = !email.archived;
           });
         };
       });
