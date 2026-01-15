@@ -37,7 +37,7 @@ function load_mailbox(mailbox) {
   if (mailbox === 'sent') {
     archive_button.style.display = 'none';
   } else {
-    archive_button.styele.display = 'block';
+    archive_button.style.display = 'block';
   }
 
   // Show the mailbox name
