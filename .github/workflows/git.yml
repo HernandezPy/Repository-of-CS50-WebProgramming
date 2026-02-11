@@ -12,7 +12,7 @@ env:
    # Hostname of your registry
    REGISTRY: docker.io
    # Image repository, without hostname and tag
-   IMAGE_NAME: ${{ hernandezpy/repository-of-cs50-webprogramming }}
+   IMAGE_NAME: hernandezpy/repository-of-cs50-webprogramming
    SHA: ${{ github.event.pull_request.head.sha || github.event.after }}
 
 jobs:
